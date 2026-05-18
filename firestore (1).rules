@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Cases — read-only for everyone (seeded once, never written by the app)
+    match /cases/{caseId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // QR rules — read-only for everyone
+    match /qr_rules/{ruleId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Progress — each session can only read/write its own document
+    match /progress/{sessionId} {
+      allow read, write: if true;  // open — tighten once auth is added
+    }
+  }
+}
