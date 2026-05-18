@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MRCP SCE — Rheumatology Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+/* ─── TOKENS ─────────────────────────────────────────────── */
+:root {
+  --accent: #00d4aa;
+  --accent-dim: rgba(0,212,170,0.12);
+  --accent-border: rgba(0,212,170,0.35);
+  --danger: #ff6b6b;
+  --danger-dim: rgba(255,107,107,0.12);
+  --gold: #ffc342;
+  --gold-dim: rgba(255,195,66,0.12);
+  --mono: 'IBM Plex Mono', monospace;
+  --sans: 'IBM Plex Sans', sans-serif;
+  --sidebar-w: 280px;
+  --radius: 8px;
+  --transition: 0.18s ease;
+}
+[data-theme="dark"] {
+  --bg: #0d0f10;
+  --bg2: #131619;
+  --bg3: #1a1f23;
+  --bg4: #212830;
+  --border: rgba(255,255,255,0.08);
+  --text: #e2e8f0;
+  --text2: #8899aa;
+  --text3: #566473;
+  --card-bg: #131619;
+  --card-hover: #1a1f23;
+  --sidebar-bg: #0d0f10;
+  --topbar-bg: rgba(13,15,16,0.92);
+}
+[data-theme="light"] {
+  --bg: #f4f6f8;
+  --bg2: #ffffff;
+  --bg3: #eef1f5;
+  --bg4: #e4e8ed;
+  --border: rgba(0,0,0,0.09);
+  --text: #1a2332;
+  --text2: #4a5568;
+  --text3: #94a3b8;
+  --card-bg: #ffffff;
+  --card-hover: #f8fafc;
+  --sidebar-bg: #ffffff;
+  --topbar-bg: rgba(244,246,248,0.92);
+}
+
+/* ─── RESET ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+  transition: background var(--transition), color var(--transition);
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ─── LAYOUT ─────────────────────────────────────────────── */
+#app { display: flex; min-height: 100vh; }
+
+/* ─── TOPBAR ─────────────────────────────────────────────── */
+#topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 52px;
+  background: var(--topbar-bg);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  z-index: 200;
+}
+#topbar .logo {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+#topbar .logo span { color: var(--text2); font-weight: 400; }
+#search-wrap {
+  margin-left: auto;
+  max-width: 380px;
+  width: 380px;
+  position: relative;
+}
+#search {
+  width: 100%;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 12px 6px 32px;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--text);
+  outline: none;
+  transition: border var(--transition);
+}
+#search:focus { border-color: var(--accent-border); }
+#search::placeholder { color: var(--text3); }
+.search-icon {
+  position: absolute;
+  left: 10px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--text3);
+  font-size: 14px;
+  pointer-events: none;
+}
+#topbar-right { display: flex; align-items: center; gap: 10px; }
+#theme-toggle {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 14px;
+  color: var(--text2);
+  transition: all var(--transition);
+}
+#theme-toggle:hover { color: var(--text); border-color: var(--accent-border); }
+#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: var(--text2);
+  font-size: 18px;
+}
+/* Mobile search icon button (replaces full bar on mobile) */
+#search-icon-btn {
+  display: none;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 16px;
+  color: var(--text2);
+  transition: all var(--transition);
+  line-height: 1;
+}
+#search-icon-btn:hover { color: var(--text); border-color: var(--accent-border); }
+/* Mobile search overlay (full-width dropdown) */
+#mobile-search-overlay {
+  display: none;
+  position: fixed;
+  top: 52px; left: 0; right: 0;
+  background: var(--topbar-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 14px;
+  z-index: 190;
+}
+#mobile-search-overlay.open { display: block; }
+#mobile-search-overlay input {
+  width: 100%;
+  background: var(--bg3);
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--text);
+  outline: none;
+}
+.progress-pill {
+  font-family: var(--mono);
+  font-size: 11px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  border-radius: 20px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+/* ─── SIDEBAR ────────────────────────────────────────────── */
+#sidebar {
+  width: var(--sidebar-w);
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border);
+  position: fixed;
+  top: 52px;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 150;
+  transition: transform var(--transition), background var(--transition);
+  padding-bottom: 24px;
+}
+#sidebar::-webkit-scrollbar { width: 4px; }
+#sidebar::-webkit-scrollbar-track { background: transparent; }
+#sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+.sidebar-section { padding: 16px 0 8px; }
+.sidebar-section-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text3);
+  padding: 0 18px 8px;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text2);
+  border-left: 2px solid transparent;
+  transition: all var(--transition);
+  line-height: 1.4;
+  user-select: none;
+}
+.nav-item:hover { color: var(--text); background: var(--bg3); }
+.nav-item.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  background: var(--accent-dim);
+  font-weight: 500;
+}
+.nav-item .nav-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text3);
+  min-width: 20px;
+  text-align: right;
+}
+.nav-item .nav-count {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text3);
+  background: var(--bg3);
+  border-radius: 10px;
+  padding: 1px 6px;
+  white-space: nowrap;
+}
+.nav-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 8px 18px;
+}
+.nav-special {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gold);
+  border-left: 2px solid transparent;
+  transition: all var(--transition);
+}
+.nav-special:hover { background: var(--gold-dim); border-left-color: var(--gold); }
+.nav-special.active { background: var(--gold-dim); border-left-color: var(--gold); }
+
+/* ─── MAIN CONTENT ───────────────────────────────────────── */
+#main {
+  margin-left: var(--sidebar-w);
+  margin-top: 52px;
+  flex: 1;
+  padding: 28px 32px 60px;
+  max-width: 920px;
+}
+
+/* ─── PAGE HEADER ────────────────────────────────────────── */
+.page-header {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.page-header h1 {
+  font-family: var(--mono);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.page-header .chapter-meta {
+  font-size: 13px;
+  color: var(--text2);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.chapter-meta .badge {
+  font-family: var(--mono);
+  font-size: 11px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 8px;
+  color: var(--text3);
+}
+
+/* ─── RULE BANNER ────────────────────────────────────────── */
+.rule-banner {
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: var(--text);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.rule-banner .rule-icon { font-size: 15px; margin-top: 1px; flex-shrink: 0; }
+.rule-banner strong { color: var(--accent); }
+
+/* ─── CASE CARD ──────────────────────────────────────────── */
+.case-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.case-card:hover { border-color: rgba(255,255,255,0.14); }
+.case-card.answered { border-left: 3px solid var(--accent); }
+.case-card.answered.wrong { border-left-color: var(--danger); }
+
+.case-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  cursor: pointer;
+  user-select: none;
+  transition: background var(--transition);
+}
+.case-header:hover { background: var(--card-hover); }
+.case-id {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text3);
+  min-width: 80px;
+  white-space: nowrap;
+}
+.case-title {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.4;
+}
+.case-status {
+  font-size: 14px;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+.chevron {
+  font-size: 12px;
+  color: var(--text3);
+  transition: transform var(--transition);
+  flex-shrink: 0;
+}
+.case-card.open .chevron { transform: rotate(180deg); }
+
+.case-body {
+  display: none;
+  border-top: 1px solid var(--border);
+}
+.case-card.open .case-body { display: block; }
+
+/* ─── SECTION TABS ───────────────────────────────────────── */
+.section-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.section-tabs::-webkit-scrollbar { display: none; }
+.tab-btn {
+  padding: 10px 18px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text3);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: all var(--transition);
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+.tab-panel { display: none; padding: 20px 20px; }
+.tab-panel.active { display: block; }
+
+/* ─── VIGNETTE ───────────────────────────────────────────── */
+.vignette {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text);
+}
+.vignette p { margin-bottom: 12px; }
+
+/* ─── WORKUP TABLE ───────────────────────────────────────── */
+.workup-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 8px;
+}
+.workup-table th {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text3);
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg3);
+}
+.workup-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.workup-table tr:last-child td { border-bottom: none; }
+.workup-table tr:nth-child(even) { background: var(--bg3); }
+.abnormal { color: var(--danger); font-weight: 500; }
+.normal { color: var(--accent); }
+
+/* ─── QUESTION SECTION ───────────────────────────────────── */
+.question-stem {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 18px;
+  line-height: 1.5;
+  border-left: 3px solid var(--accent);
+  padding-left: 14px;
+}
+.choices { display: flex; flex-direction: column; gap: 8px; }
+.choice-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition);
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--text);
+  width: 100%;
+}
+.choice-btn:hover:not(:disabled) {
+  background: var(--bg4);
+  border-color: rgba(255,255,255,0.2);
+  transform: translateX(2px);
+}
+.choice-btn:disabled { cursor: default; }
+.choice-btn.correct {
+  background: rgba(0,212,170,0.1);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.choice-btn.wrong {
+  background: var(--danger-dim);
+  border-color: var(--danger);
+  color: var(--danger);
+}
+.choice-btn.neutral-reveal {
+  opacity: 0.55;
+}
+.choice-letter {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: var(--bg4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background var(--transition);
+}
+.choice-btn.correct .choice-letter { background: var(--accent); color: var(--bg); }
+.choice-btn.wrong .choice-letter { background: var(--danger); color: #fff; }
+.choice-pct {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text3);
+  min-width: 32px;
+  text-align: right;
+}
+.choice-pct-bar {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  background: rgba(255,255,255,0.03);
+  border-radius: var(--radius);
+  pointer-events: none;
+  transition: width 0.4s ease;
+}
+.choice-btn { position: relative; overflow: hidden; }
+
+/* ─── EXPLANATION ────────────────────────────────────────── */
+.explanation {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text);
+}
+.explanation p { margin-bottom: 12px; }
+.explanation p:last-child { margin-bottom: 0; }
+.resources-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.resources-list li {
+  font-size: 13px;
+  color: var(--text2);
+  padding: 10px 14px;
+  background: var(--bg3);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  line-height: 1.5;
+}
+.resources-list li::before {
+  content: '↗ ';
+  font-family: var(--mono);
+  color: var(--text3);
+  font-size: 12px;
+}
+
+/* ─── ANSWER REVEAL ──────────────────────────────────────── */
+.answer-result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.answer-result.show { opacity: 1; transform: translateY(0); }
+.answer-result.correct { background: var(--accent-dim); color: var(--accent); border: 1px solid var(--accent-border); }
+.answer-result.wrong { background: var(--danger-dim); color: var(--danger); border: 1px solid rgba(255,107,107,0.35); }
+
+/* ─── QUICK REFERENCE PAGE ───────────────────────────────── */
+#qr-page { display: none; }
+#qr-page.active { display: block; }
+#cases-view { display: none; }
+#cases-view.active { display: block; }
+#home-view { display: none; }
+#home-view.active { display: block; }
+
+.qr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; margin-top: 20px; }
+.qr-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  transition: border-color var(--transition);
+}
+.qr-card:hover { border-color: var(--accent-border); }
+.qr-card-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.qr-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.qr-card p {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.65;
+}
+.qr-card .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.qr-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text3);
+}
+
+/* ─── HOME DASHBOARD ─────────────────────────────────────── */
+.home-hero {
+  padding: 40px 0 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+.home-hero h1 {
+  font-family: var(--mono);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.home-hero h1 span { color: var(--accent); }
+.home-hero p { font-size: 14px; color: var(--text2); max-width: 520px; }
+.stats-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0 32px; }
+.stat-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  min-width: 120px;
+}
+.stat-card .stat-val {
+  font-family: var(--mono);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-card .stat-label {
+  font-size: 12px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.chapter-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.chapter-tile {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.chapter-tile:hover {
+  border-color: var(--accent-border);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+.chapter-tile .tile-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  border-radius: 4px;
+  padding: 3px 8px;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+.chapter-tile .tile-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.45;
+  flex: 1;
+}
+.chapter-tile .tile-count {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text3);
+  margin-top: 4px;
+}
+.home-section-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 14px;
+}
+
+/* ─── EMPTY STATE ────────────────────────────────────────── */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text3);
+}
+.empty-state .icon { font-size: 40px; margin-bottom: 12px; }
+.empty-state p { font-size: 14px; }
+
+/* ─── MOBILE ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  #hamburger { display: flex; align-items: center; justify-content: center; }
+  /* Hide full search bar, show icon button instead */
+  #search-wrap { display: none; }
+  #search-icon-btn { display: flex; align-items: center; justify-content: center; }
+  /* Hide progress pill on mobile to make room for theme toggle */
+  .progress-pill { display: none; }
+  /* Push search icon + theme toggle to the right */
+  #topbar .logo { flex: 1; }
+  #topbar-right { margin-left: 0; }
+  #sidebar {
+    transform: translateX(-100%);
+    width: 100%;
+    max-width: 300px;
+    z-index: 500;
+    box-shadow: 4px 0 24px rgba(0,0,0,0.4);
+  }
+  #sidebar.open { transform: translateX(0); }
+  #main { margin-left: 0; padding: 20px 16px 60px; }
+  .qr-grid { grid-template-columns: 1fr; }
+  .chapter-grid { grid-template-columns: 1fr; }
+  #overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 400;
+  }
+  #overlay.show { display: block; }
+  .stats-row { gap: 10px; }
+  .stat-card { padding: 12px 16px; }
+  .stat-card .stat-val { font-size: 22px; }
+}
+@media (min-width: 769px) {
+  #mobile-search-overlay { display: none !important; }
+}
+/* Phone only: hide MRCP SCE · prefix, keep Rheumatology */
+@media (max-width: 480px) {
+  .logo-prefix { display: none; }
+}
+@media (min-width: 769px) {
+  #overlay { display: none !important; }
+}
+
+/* ─── ANIMATIONS ─────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.case-card { animation: fadeIn 0.25s ease forwards; }
+.tab-panel.active { animation: fadeIn 0.18s ease forwards; }
+.qr-card { animation: fadeIn 0.2s ease forwards; }
+
+/* ─── MISC ───────────────────────────────────────────────── */
+.label-sm {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 10px;
+  display: block;
+}
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  color: var(--text3);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.filter-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+.filter-btn.active { background: var(--accent-dim); border-color: var(--accent-border); color: var(--accent); }
+.filter-count { margin-left: auto; font-family: var(--mono); font-size: 12px; color: var(--text3); }
+
+/* ─── QR FILTERS ─────────────────────────────────────────── */
+.qr-filter-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 20px;
+}
+
+/* Always-visible filter bar (chapters dropdown + filter meta) */
+.qr-filter-always {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.qr-filter-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text3);
+  white-space: nowrap;
+}
+
+/* ── Chapter dropdown ── */
+.qr-chapter-dropdown-wrap { position: relative; flex: 1; min-width: 180px; max-width: 340px; }
+.qr-chapter-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 7px 12px;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color var(--transition);
+  text-align: left;
+}
+.qr-chapter-trigger:hover { border-color: var(--accent-border); }
+.qr-chapter-trigger.has-selection { border-color: var(--accent-border); color: var(--accent); }
+.qr-chapter-trigger-text { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.qr-chapter-trigger-chevron { font-size: 11px; color: var(--text3); transition: transform 0.2s; flex-shrink: 0; }
+.qr-chapter-dropdown-wrap.open .qr-chapter-trigger-chevron { transform: rotate(180deg); }
+
+/* Desktop/tablet dropdown panel */
+.qr-chapter-panel {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 100%;
+  max-width: 420px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+  z-index: 300;
+  overflow: hidden;
+  max-height: 360px;
+  overflow-y: auto;
+}
+.qr-chapter-dropdown-wrap.open .qr-chapter-panel { display: block; }
+.qr-chapter-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--text2);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+  border-bottom: 1px solid var(--border);
+  user-select: none;
+}
+.qr-chapter-option:last-child { border-bottom: none; }
+.qr-chapter-option:hover { background: var(--bg3); color: var(--text); }
+.qr-chapter-option.active { color: var(--accent); background: var(--accent-dim); }
+.qr-chapter-option .opt-check {
+  width: 16px; height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 10px;
+  transition: all var(--transition);
+}
+.qr-chapter-option.active .opt-check {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+/* ── Tags collapsible section ── */
+.qr-tags-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 10px 0 0;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text3);
+  transition: color var(--transition);
+  margin-top: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+.qr-tags-toggle:hover { color: var(--text2); }
+.qr-tags-chevron { font-size: 11px; transition: transform 0.2s; margin-left: auto; }
+.qr-tags-section.open .qr-tags-chevron { transform: rotate(180deg); }
+.qr-tags-body { display: none; margin-top: 10px; }
+.qr-tags-section.open .qr-tags-body { display: block; }
+.qr-filter-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.qr-chip {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  color: var(--text3);
+  cursor: pointer;
+  transition: all var(--transition);
+  user-select: none;
+  line-height: 1.4;
+}
+.qr-chip:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+.qr-chip.tag-chip.active { background: var(--gold-dim); border-color: rgba(255,195,66,0.4); color: var(--gold); }
+
+.qr-clear-btn {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--danger);
+  background: var(--danger-dim);
+  color: var(--danger);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.qr-clear-btn:hover { opacity: 0.8; }
+.qr-filter-meta { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+.qr-card.hidden { display: none; }
+
+.qr-filter-active-badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  border-radius: 10px;
+  padding: 1px 7px;
+}
+
+/* ── Mobile bottom sheet ── */
+.qr-bottom-sheet-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 600;
+}
+.qr-bottom-sheet-backdrop.open { display: block; }
+.qr-bottom-sheet {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  background: var(--card-bg);
+  border-top: 1px solid var(--border);
+  border-radius: 16px 16px 0 0;
+  z-index: 700;
+  padding: 0 0 env(safe-area-inset-bottom, 16px);
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.32,0.72,0,1);
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+.qr-bottom-sheet.open { transform: translateY(0); }
+.qr-bottom-sheet-handle {
+  width: 36px; height: 4px;
+  border-radius: 2px;
+  background: var(--border);
+  margin: 12px auto 0;
+  flex-shrink: 0;
+}
+.qr-bottom-sheet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px 10px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.qr-bottom-sheet-title {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text2);
+}
+.qr-bottom-sheet-done {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.qr-bottom-sheet-options {
+  overflow-y: auto;
+  flex: 1;
+  -webkit-overflow-scrolling: touch;
+}
+.qr-sheet-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition);
+  user-select: none;
+}
+.qr-sheet-option:last-child { border-bottom: none; }
+.qr-sheet-option:active { background: var(--bg3); }
+.qr-sheet-option.active { color: var(--accent); }
+.qr-sheet-option .sheet-check {
+  width: 20px; height: 20px;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 12px;
+  margin-left: auto;
+  transition: all var(--transition);
+}
+.qr-sheet-option.active .sheet-check {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+@media (max-width: 768px) {
+  .qr-chapter-panel { display: none !important; } /* always use bottom sheet on mobile */
+  .qr-chapter-dropdown-wrap { max-width: none; }
+}
+
+/* ─── LOADING SPINNER ────────────────────────────────── */
+.db-spinner {
+  width: 16px; height: 16px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div id="overlay"></div>
+
+<!-- LOADING SCREEN -->
+<div id="loading-screen" style="
+  display:flex; position:fixed; inset:0; z-index:9999;
+  background:var(--bg); align-items:center; justify-content:center;
+  flex-direction:column; gap:20px;">
+  <div style="font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent);letter-spacing:0.1em;">
+    MRCP SCE · Rheumatology
+  </div>
+  <div style="display:flex;gap:8px;align-items:center;">
+    <div class="db-spinner"></div>
+    <span style="font-family:var(--mono);font-size:12px;color:var(--text3);">Loading from database…</span>
+  </div>
+</div>
+
+<!-- TOPBAR -->
+<div id="topbar">
+  <button id="hamburger" onclick="toggleSidebar()">☰</button>
+  <div class="logo"><span class="logo-prefix">MRCP <span class="logo-sep">SCE ·</span> </span>Rheumatology</div>
+  <div id="search-wrap">
+    <span class="search-icon">⌕</span>
+    <input type="search" id="search" placeholder="Search cases, rules, topics…" oninput="handleSearch(this.value)">
+  </div>
+  <button id="search-icon-btn" onclick="toggleMobileSearch()" title="Search">⌕</button>
+  <div id="topbar-right">
+    <div class="progress-pill" id="progress-pill">0 / 127</div>
+    <button id="theme-toggle" onclick="toggleTheme()">☀</button>
+  </div>
+</div>
+<div id="mobile-search-overlay">
+  <input type="search" id="mobile-search" placeholder="Search cases, rules, topics…" oninput="handleSearch(this.value)" autocomplete="off">
+</div>
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Navigation</div>
+    <div class="nav-special" onclick="showView('home')">
+      🏠 Dashboard
+    </div>
+    <div class="nav-special" onclick="showView('qr')">
+      ⚡ Quick Reference Rules
+    </div>
+  </div>
+
+  <div class="nav-divider"></div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-label">Chapters</div>
+    <div id="chapter-nav"></div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main id="main">
+
+  <!-- HOME VIEW -->
+  <div id="home-view" class="active">
+    <div class="home-hero">
+      <h1>MRCP SCE<br><span>Rheumatology Review</span></h1>
+      <p>127 clinical cases across 11 chapters. Work through cases, reveal answers, and build pattern recognition for the exam.</p>
+    </div>
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-val">127</div><div class="stat-label">Total Cases</div></div>
+      <div class="stat-card"><div class="stat-val">11</div><div class="stat-label">Chapters</div></div>
+      <div class="stat-card"><div class="stat-val" id="answered-count">0</div><div class="stat-label">Answered</div></div>
+      <div class="stat-card"><div class="stat-val" id="correct-count">0</div><div class="stat-label">Correct</div></div>
+    </div>
+    <div class="home-section-title">Browse Chapters</div>
+    <div class="chapter-grid" id="home-chapter-grid"></div>
+  </div>
+
+  <!-- CASES VIEW -->
+  <div id="cases-view">
+    <div class="page-header">
+      <h1 id="chapter-title">Chapter</h1>
+      <div class="chapter-meta">
+        <span id="chapter-count-badge" class="badge">0 cases</span>
+        <span id="chapter-subtitle" style="color:var(--text3); font-size:12px;"></span>
+      </div>
+    </div>
+    <div class="filter-row">
+      <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+      <button class="filter-btn" onclick="setFilter('unanswered', this)">Unanswered</button>
+      <button class="filter-btn" onclick="setFilter('correct', this)">Correct ✓</button>
+      <button class="filter-btn" onclick="setFilter('wrong', this)">Incorrect ✗</button>
+      <span class="filter-count" id="filter-count"></span>
+    </div>
+    <div id="cases-container"></div>
+  </div>
+
+  <!-- QR VIEW -->
+  <div id="qr-page">
+    <div class="page-header">
+      <h1>⚡ Quick Reference Rules</h1>
+      <div class="chapter-meta">
+        <span class="badge">High-yield rules for the exam</span>
+      </div>
+    </div>
+    <div class="qr-filter-section">
+      <!-- Always visible: Chapter dropdown + badge + clear -->
+      <div class="qr-filter-always">
+        <span class="qr-filter-label">Chapter</span>
+        <div class="qr-chapter-dropdown-wrap" id="qr-chapter-wrap">
+          <button class="qr-chapter-trigger" id="qr-chapter-trigger" onclick="toggleChapterDropdown(event)">
+            <span class="qr-chapter-trigger-text" id="qr-chapter-trigger-text">All chapters</span>
+            <span class="qr-filter-active-badge" id="qr-active-badge" style="display:none"></span>
+            <span class="qr-chapter-trigger-chevron">▾</span>
+          </button>
+          <!-- Desktop/tablet dropdown panel -->
+          <div class="qr-chapter-panel" id="qr-chapter-panel"></div>
+        </div>
+        <button class="qr-clear-btn" id="qr-clear-btn" onclick="clearQRFilters()" style="display:none">✕ Clear</button>
+      </div>
+
+      <!-- Tags: collapsible section -->
+      <div class="qr-tags-section" id="qr-tags-section">
+        <button class="qr-tags-toggle" onclick="toggleTagsSection()">
+          Tags
+          <span class="qr-filter-active-badge" id="qr-tags-badge" style="display:none"></span>
+          <span class="qr-tags-chevron" id="qr-tags-chevron">▾</span>
+        </button>
+        <div class="qr-tags-body" id="qr-tags-body">
+          <div class="qr-filter-chips" id="qr-tag-filters" style="margin-top:10px"></div>
+        </div>
+      </div>
+
+      <div class="qr-filter-meta">
+        <span class="filter-count" id="qr-filter-count" style="margin-left:0"></span>
+      </div>
+    </div>
+
+    <!-- Mobile bottom sheet for chapters -->
+    <div class="qr-bottom-sheet-backdrop" id="qr-sheet-backdrop" onclick="closeChapterSheet()"></div>
+    <div class="qr-bottom-sheet" id="qr-bottom-sheet">
+      <div class="qr-bottom-sheet-handle"></div>
+      <div class="qr-bottom-sheet-header">
+        <span class="qr-bottom-sheet-title">Select Chapters</span>
+        <button class="qr-bottom-sheet-done" onclick="closeChapterSheet()">Done</button>
+      </div>
+      <div class="qr-bottom-sheet-options" id="qr-sheet-options"></div>
+    </div>
+    <div class="qr-grid" id="qr-grid"></div>
+  </div>
+
+</main>
+
+<script type="module">
+// ─── FIREBASE ─────────────────────────────────────────────────────────────────
+import { initializeApp }                        from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAnalytics }                         from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+import { getFirestore, collection, getDocs,
+         doc, setDoc, getDoc }                  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey:            "AIzaSyAsCIyQ6JcjFUecOJKY6MY3uzgffRSTR98",
+  authDomain:        "yahakeem-b9349.firebaseapp.com",
+  projectId:         "yahakeem-b9349",
+  storageBucket:     "yahakeem-b9349.firebasestorage.app",
+  messagingSenderId: "533411259533",
+  appId:             "1:533411259533:web:2262a1c29d40882a326ec4",
+  measurementId:     "G-C4QJSSFP3E"
+};
+
+const app       = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const db        = getFirestore(app);
+
+// ─── SESSION KEY (anonymous per-device persistence) ───────────────────────────
+// A stable ID stored in localStorage lets progress survive page reloads
+// without requiring authentication.
+let SESSION_KEY = localStorage.getItem('reum_session_key');
+if (!SESSION_KEY) {
+  SESSION_KEY = 'session_' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+  localStorage.setItem('reum_session_key', SESSION_KEY);
+}
+
+// ─── DATA (loaded from Firestore) ─────────────────────────────────────────────
+// These will be populated by loadData() on boot.
+let CASES    = [];
+let QR_RULES = [];
+
+// ─── DATA ─────────────────────────────────────────────────────────────────────
+
+const CHAPTERS = [
+  { id: 1, title: "Adult Inflammatory Arthritis incl. Crystal Arthropathies", short: "Inflammatory Arthritis & Crystal" },
+  { id: 2, title: "Inflammatory Myopathies", short: "Inflammatory Myopathies" },
+  { id: 3, title: "Systemic Sclerosis (SSc)", short: "Systemic Sclerosis" },
+  { id: 4, title: "Vasculitis", short: "Vasculitis" },
+  { id: 5, title: "SLE & Antiphospholipid Syndrome", short: "SLE & APS" },
+  { id: 6, title: "Sjögren's Syndrome", short: "Sjögren's Syndrome" },
+  { id: 7, title: "Axial Spondyloarthropathy", short: "Axial SpA" },
+  { id: 8, title: "Osteoporosis & Metabolic Bone Disease", short: "Osteoporosis & Metabolic Bone" },
+  { id: 9, title: "Autoinflammatory & Periodic Fever Syndromes", short: "Autoinflammatory" },
+  { id: 10, title: "Connective Tissue Disease Overlap", short: "CTD Overlap" },
+  { id: 11, title: "Miscellaneous Rheumatology", short: "Miscellaneous" },
+];
+
+
+// ─── STATE ────────────────────────────────────────────────────────────────────
+let state = {
+  currentView: 'home',
+  currentChapter: null,
+  answered: {},   // populated from Firestore on boot
+  activeFilter: 'all',
+  searchQuery: '',
+};
+
+// Save a single answer both to Firestore and localStorage (fallback)
+async function saveState() {
+  // localStorage fallback
+  localStorage.setItem('reum_answered', JSON.stringify(state.answered));
+  // Firestore — store the whole answered map under the session doc
+  try {
+    await setDoc(
+      doc(db, 'progress', SESSION_KEY),
+      { answered: state.answered },
+      { merge: true }
+    );
+  } catch (e) {
+    console.warn('Firestore save failed, localStorage used as fallback:', e);
+  }
+}
+
+// ─── FIREBASE DATA LOADER ─────────────────────────────────────────────────────
+async function loadData() {
+  showLoadingScreen(true);
+  try {
+    // ── Load cases ──
+    const casesSnap = await getDocs(collection(db, 'cases'));
+    CASES = casesSnap.docs
+      .map(d => d.data())
+      .sort((a, b) => (a.chapter - b.chapter) || (a.num - b.num));
+
+    // ── Load QR rules ──
+    const qrSnap = await getDocs(collection(db, 'qr_rules'));
+    QR_RULES = qrSnap.docs
+      .map(d => d.data())
+      .sort((a, b) => d => 0); // preserve insertion order
+
+    // ── Load progress ──
+    const progSnap = await getDoc(doc(db, 'progress', SESSION_KEY));
+    if (progSnap.exists()) {
+      state.answered = progSnap.data().answered || {};
+    } else {
+      // fall back to localStorage if no Firestore record yet
+      state.answered = JSON.parse(localStorage.getItem('reum_answered') || '{}');
+    }
+  } catch (err) {
+    console.error('Firestore load failed:', err);
+    showError('Could not load data from database. Check your connection and refresh.');
+    return;
+  }
+  showLoadingScreen(false);
+  buildSidebar();
+  buildHomeGrid();
+  buildQRGrid();
+  updateProgress();
+  showView('home');
+}
+
+function showLoadingScreen(visible) {
+  document.getElementById('loading-screen').style.display = visible ? 'flex' : 'none';
+  document.getElementById('app').style.visibility = visible ? 'hidden' : 'visible';
+}
+
+function showError(msg) {
+  document.getElementById('loading-screen').innerHTML = `
+    <div style="text-align:center;padding:40px;color:var(--danger);">
+      <div style="font-size:32px;margin-bottom:16px;">⚠</div>
+      <div style="font-family:var(--mono);font-size:14px;">${msg}</div>
+      <button onclick="location.reload()" style="margin-top:24px;padding:8px 20px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:var(--mono);">Retry</button>
+    </div>`;
+}
+
+// ─── INIT ─────────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  loadData();
+});
+
+// ─── SIDEBAR ──────────────────────────────────────────────────────────────────
+function buildSidebar() {
+  const nav = document.getElementById('chapter-nav');
+  nav.innerHTML = CHAPTERS.map(ch => {
+    const count = CASES.filter(c => c.chapter === ch.id).length;
+    return `<div class="nav-item" id="nav-ch-${ch.id}" onclick="showChapter(${ch.id})">
+      <span class="nav-num">${ch.id}</span>
+      <span style="flex:1">${ch.short}</span>
+      <span class="nav-count">${count}</span>
+    </div>`;
+  }).join('');
+}
+
+function updateSidebarActive(chapterId) {
+  document.querySelectorAll('.nav-item, .nav-special').forEach(el => el.classList.remove('active'));
+  if (chapterId) document.getElementById(`nav-ch-${chapterId}`)?.classList.add('active');
+}
+
+// ─── HOME ─────────────────────────────────────────────────────────────────────
+function buildHomeGrid() {
+  const grid = document.getElementById('home-chapter-grid');
+  grid.innerHTML = CHAPTERS.map(ch => {
+    const count = CASES.filter(c => c.chapter === ch.id).length;
+    return `<div class="chapter-tile" onclick="showChapter(${ch.id})">
+      <span class="tile-num">Ch ${ch.id}</span>
+      <div>
+        <div class="tile-title">${ch.title}</div>
+        <div class="tile-count">${count} case${count !== 1 ? 's' : ''}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ─── VIEWS ────────────────────────────────────────────────────────────────────
+function showView(view) {
+  document.getElementById('home-view').classList.toggle('active', view === 'home');
+  document.getElementById('cases-view').classList.toggle('active', view === 'cases');
+  document.getElementById('qr-page').classList.toggle('active', view === 'qr');
+  state.currentView = view;
+  if (window.innerWidth < 769) closeSidebar();
+
+  // sidebar highlight
+  document.querySelectorAll('.nav-item, .nav-special').forEach(el => el.classList.remove('active'));
+  if (view === 'qr') document.querySelectorAll('.nav-special')[1]?.classList.add('active');
+  if (view === 'home') document.querySelectorAll('.nav-special')[0]?.classList.add('active');
+}
+
+function showChapter(chId) {
+  state.currentChapter = chId;
+  state.activeFilter = 'all';
+  state.searchQuery = '';
+  document.getElementById('search').value = '';
+
+  const ch = CHAPTERS.find(c => c.id === chId);
+  document.getElementById('chapter-title').textContent = `Ch ${chId}: ${ch.title}`;
+
+  renderCases();
+  showView('cases');
+  updateSidebarActive(chId);
+}
+
+// ─── CASES ────────────────────────────────────────────────────────────────────
+function renderCases() {
+  const chId = state.currentChapter;
+  let cases = CASES.filter(c => c.chapter === chId);
+
+  // filter
+  if (state.activeFilter === 'unanswered') cases = cases.filter(c => !state.answered[c.id]);
+  if (state.activeFilter === 'correct') cases = cases.filter(c => state.answered[c.id] === 'correct');
+  if (state.activeFilter === 'wrong') cases = cases.filter(c => state.answered[c.id] === 'wrong');
+
+  // search
+  if (state.searchQuery) {
+    const q = state.searchQuery.toLowerCase();
+    cases = cases.filter(c =>
+      c.vignette.toLowerCase().includes(q) ||
+      c.question.toLowerCase().includes(q) ||
+      c.rule.toLowerCase().includes(q) ||
+      (c.explanation || '').toLowerCase().includes(q)
+    );
+  }
+
+  const count = CASES.filter(c => c.chapter === chId).length;
+  document.getElementById('chapter-count-badge').textContent = `${count} cases`;
+  document.getElementById('filter-count').textContent = `Showing ${cases.length}`;
+
+  const container = document.getElementById('cases-container');
+  if (cases.length === 0) {
+    container.innerHTML = `<div class="empty-state"><div class="icon">🔍</div><p>No cases match the current filter.</p></div>`;
+    return;
+  }
+  container.innerHTML = cases.map(c => renderCase(c)).join('');
+}
+
+function renderCase(c) {
+  const answerState = state.answered[c.id];
+  const statusIcon = answerState === 'correct' ? '✓' : answerState === 'wrong' ? '✗' : '';
+  const cardClass = answerState ? (answerState === 'correct' ? 'answered' : 'answered wrong') : '';
+
+  const hasWorkup = c.workup && c.workup.length > 0;
+
+  return `<div class="case-card ${cardClass}" id="card-${c.id}">
+    <div class="case-header" onclick="toggleCase('${c.id}')">
+      <span class="case-id">Q #${c.id}</span>
+      <span class="case-title">${c.question}</span>
+      <span class="case-status">${statusIcon}</span>
+      <span class="chevron">▾</span>
+    </div>
+    <div class="case-body">
+      <!-- Rule banner -->
+      <div class="rule-banner">
+        <span class="rule-icon">⚡</span>
+        <span><strong>Key Rule:</strong> ${escHtml(c.rule)}</span>
+      </div>
+
+      <!-- Section tabs -->
+      <div class="section-tabs">
+        <button class="tab-btn active" onclick="switchTab(event,'${c.id}','vignette')">Vignette</button>
+        ${hasWorkup ? `<button class="tab-btn" onclick="switchTab(event,'${c.id}','workup')">Workup</button>` : ''}
+        <button class="tab-btn" onclick="switchTab(event,'${c.id}','question')">Question</button>
+        <button class="tab-btn" onclick="switchTab(event,'${c.id}','explanation')">Explanation</button>
+        <button class="tab-btn" onclick="switchTab(event,'${c.id}','resources')">Resources</button>
+      </div>
+
+      <!-- Vignette -->
+      <div class="tab-panel active" id="tab-${c.id}-vignette">
+        <div class="vignette">${c.vignette.split('\n\n').map(p => `<p>${escHtml(p)}</p>`).join('')}</div>
+      </div>
+
+      <!-- Workup -->
+      ${hasWorkup ? `<div class="tab-panel" id="tab-${c.id}-workup">
+        <table class="workup-table">
+          <thead><tr><th>Investigation</th><th>Result</th><th>Normal Range</th></tr></thead>
+          <tbody>${c.workup.map(([inv, res, norm, abn]) =>
+            `<tr><td>${escHtml(inv)}</td><td class="${abn ? 'abnormal' : ''}">${escHtml(res)}</td><td style="color:var(--text3)">${escHtml(norm)}</td></tr>`
+          ).join('')}</tbody>
+        </table>
+      </div>` : ''}
+
+      <!-- Question -->
+      <div class="tab-panel" id="tab-${c.id}-question">
+        <div class="question-stem">${escHtml(c.question)}</div>
+        <div class="choices" id="choices-${c.id}">
+          ${c.choices.map(ch => `
+            <button class="choice-btn" onclick="selectAnswer('${c.id}','${ch.letter}',${ch.correct})"
+              data-correct="${ch.correct}" data-letter="${ch.letter}">
+              <div class="choice-pct-bar" style="width:${ch.pct}%"></div>
+              <span class="choice-letter">${ch.letter}</span>
+              <span style="flex:1">${escHtml(ch.text)}</span>
+              <span class="choice-pct" style="display:none">${ch.pct}%</span>
+            </button>`).join('')}
+        </div>
+        <div class="answer-result" id="result-${c.id}"></div>
+      </div>
+
+      <!-- Explanation -->
+      <div class="tab-panel" id="tab-${c.id}-explanation">
+        ${c.explanation
+          ? c.explanation.split('\n\n').map(p => `<p class="explanation">${escHtml(p)}</p>`).join('')
+          : '<p style="color:var(--text3); font-style:italic;">Explanation to be added in Phase 2.</p>'}
+      </div>
+
+      <!-- Resources -->
+      <div class="tab-panel" id="tab-${c.id}-resources">
+        ${c.resources && c.resources.length
+          ? `<ul class="resources-list">${c.resources.map(r => `<li>${escHtml(r)}</li>`).join('')}</ul>`
+          : '<p style="color:var(--text3); font-style:italic;">Resources to be added in Phase 2.</p>'}
+      </div>
+    </div>
+  </div>`;
+}
+
+function toggleCase(id) {
+  const card = document.getElementById(`card-${id}`);
+  card.classList.toggle('open');
+}
+
+function switchTab(e, caseId, panel) {
+  const card = document.getElementById(`card-${caseId}`);
+  card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  card.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  e.target.classList.add('active');
+  document.getElementById(`tab-${caseId}-${panel}`)?.classList.add('active');
+}
+
+function selectAnswer(caseId, letter, isCorrect) {
+  const choicesEl = document.getElementById(`choices-${caseId}`);
+  if (choicesEl.querySelector('.correct, .wrong')) return; // already answered
+
+  // Record
+  state.answered[caseId] = isCorrect ? 'correct' : 'wrong';
+  saveState();
+  updateProgress();
+
+  // Reveal choices
+  choicesEl.querySelectorAll('.choice-btn').forEach(btn => {
+    btn.disabled = true;
+    const correct = btn.dataset.correct === 'true';
+    const chosen = btn.dataset.letter === letter;
+    if (correct) btn.classList.add('correct');
+    else if (chosen && !correct) btn.classList.add('wrong');
+    else btn.classList.add('neutral-reveal');
+    btn.querySelector('.choice-pct').style.display = 'block';
+  });
+
+  // Show result
+  const resultEl = document.getElementById(`result-${caseId}`);
+  resultEl.className = `answer-result ${isCorrect ? 'correct' : 'wrong'}`;
+  resultEl.innerHTML = isCorrect ? '✓ Correct! Well done.' : '✗ Incorrect. Review the explanation.';
+  setTimeout(() => resultEl.classList.add('show'), 50);
+
+  // Update card border
+  const card = document.getElementById(`card-${caseId}`);
+  card.classList.add('answered');
+  if (!isCorrect) card.classList.add('wrong');
+}
+
+// ─── QUICK REFERENCE ──────────────────────────────────────────────────────────
+let qrState = { chapters: new Set(), tags: new Set() };
+let _chapters = []; // store chapter list for sheet rendering
+
+function buildQRGrid() {
+  _chapters = [...new Set(QR_RULES.map(r => r.chapter))].sort();
+  const tags = [...new Set(QR_RULES.flatMap(r => r.tags))].sort();
+
+  // Build desktop chapter panel
+  document.getElementById('qr-chapter-panel').innerHTML =
+    _chapters.map(ch => `
+      <div class="qr-chapter-option" id="opt-ch-${escHtml(ch)}" onclick="toggleQRChapterByName('${escHtml(ch)}')">
+        <span style="flex:1">${escHtml(ch)}</span>
+        <span class="opt-check">✓</span>
+      </div>`).join('');
+
+  // Build mobile bottom sheet options
+  document.getElementById('qr-sheet-options').innerHTML =
+    _chapters.map(ch => `
+      <div class="qr-sheet-option" id="sheet-ch-${escHtml(ch)}" onclick="toggleQRChapterByName('${escHtml(ch)}')">
+        <span style="flex:1">${escHtml(ch)}</span>
+        <span class="sheet-check">✓</span>
+      </div>`).join('');
+
+  // Build tag chips
+  document.getElementById('qr-tag-filters').innerHTML =
+    tags.map(t => `<span class="qr-chip tag-chip" data-tag="${escHtml(t)}" onclick="toggleQRTag(this,'${escHtml(t)}')">${escHtml(t)}</span>`).join('');
+
+  renderQRGrid();
+}
+
+function renderQRGrid() {
+  const grid = document.getElementById('qr-grid');
+  const hasChFilter = qrState.chapters.size > 0;
+  const hasTagFilter = qrState.tags.size > 0;
+
+  const filtered = QR_RULES.filter(r => {
+    const chOk = !hasChFilter || qrState.chapters.has(r.chapter);
+    const tagOk = !hasTagFilter || r.tags.some(t => qrState.tags.has(t));
+    return chOk && tagOk;
+  });
+
+  grid.innerHTML = filtered.map(r => `
+    <div class="qr-card">
+      <div class="qr-card-label">${escHtml(r.chapter)}</div>
+      <h3>${escHtml(r.title)}</h3>
+      <p>${escHtml(r.text)}</p>
+      <div class="tag-row">${r.tags.map(t => {
+        const isActive = qrState.tags.has(t);
+        return `<span class="qr-tag" style="${isActive ? 'background:var(--gold-dim);color:var(--gold);border-color:rgba(255,195,66,0.4)' : ''}">${escHtml(t)}</span>`;
+      }).join('')}</div>
+    </div>`).join('');
+
+  const count = filtered.length;
+  document.getElementById('qr-filter-count').textContent =
+    (hasChFilter || hasTagFilter) ? `${count} of ${QR_RULES.length} rules` : `${count} rules`;
+  document.getElementById('qr-clear-btn').style.display =
+    (hasChFilter || hasTagFilter) ? 'inline-flex' : 'none';
+  updateQRBadge();
+}
+
+function toggleQRChapterByName(chapter) {
+  if (qrState.chapters.has(chapter)) {
+    qrState.chapters.delete(chapter);
+  } else {
+    qrState.chapters.add(chapter);
+  }
+  syncChapterUI();
+  renderQRGrid();
+}
+
+function syncChapterUI() {
+  _chapters.forEach(ch => {
+    const active = qrState.chapters.has(ch);
+    const opt = document.getElementById('opt-ch-' + ch);
+    const sheet = document.getElementById('sheet-ch-' + ch);
+    if (opt) opt.classList.toggle('active', active);
+    if (sheet) sheet.classList.toggle('active', active);
+  });
+  // Update trigger text
+  const triggerText = document.getElementById('qr-chapter-trigger-text');
+  const wrap = document.getElementById('qr-chapter-wrap');
+  if (qrState.chapters.size === 0) {
+    triggerText.textContent = 'All chapters';
+    wrap.querySelector('.qr-chapter-trigger').classList.remove('has-selection');
+  } else if (qrState.chapters.size === 1) {
+    triggerText.textContent = [...qrState.chapters][0];
+    wrap.querySelector('.qr-chapter-trigger').classList.add('has-selection');
+  } else {
+    triggerText.textContent = `${qrState.chapters.size} chapters`;
+    wrap.querySelector('.qr-chapter-trigger').classList.add('has-selection');
+  }
+}
+
+function toggleChapterDropdown(e) {
+  e.stopPropagation();
+  const isMobile = window.innerWidth <= 768;
+  if (isMobile) {
+    openChapterSheet();
+  } else {
+    const wrap = document.getElementById('qr-chapter-wrap');
+    wrap.classList.toggle('open');
+  }
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+  const wrap = document.getElementById('qr-chapter-wrap');
+  if (wrap && !wrap.contains(e.target)) {
+    wrap.classList.remove('open');
+  }
+});
+
+function openChapterSheet() {
+  document.getElementById('qr-sheet-backdrop').classList.add('open');
+  document.getElementById('qr-bottom-sheet').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeChapterSheet() {
+  document.getElementById('qr-sheet-backdrop').classList.remove('open');
+  document.getElementById('qr-bottom-sheet').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function toggleTagsSection() {
+  const sec = document.getElementById('qr-tags-section');
+  sec.classList.toggle('open');
+}
+
+function toggleQRTag(el, tag) {
+  if (qrState.tags.has(tag)) {
+    qrState.tags.delete(tag);
+    el.classList.remove('active');
+  } else {
+    qrState.tags.add(tag);
+    el.classList.add('active');
+  }
+  renderQRGrid();
+}
+
+function clearQRFilters() {
+  qrState.chapters.clear();
+  qrState.tags.clear();
+  syncChapterUI();
+  document.querySelectorAll('.qr-chip').forEach(c => c.classList.remove('active'));
+  renderQRGrid();
+}
+
+function updateQRBadge() {
+  const chTotal = qrState.chapters.size;
+  const tagTotal = qrState.tags.size;
+
+  const badge = document.getElementById('qr-active-badge');
+  if (chTotal > 0) {
+    badge.textContent = chTotal;
+    badge.style.display = 'inline';
+  } else {
+    badge.style.display = 'none';
+  }
+
+  const tagsBadge = document.getElementById('qr-tags-badge');
+  if (tagTotal > 0) {
+    tagsBadge.textContent = tagTotal;
+    tagsBadge.style.display = 'inline';
+  } else {
+    tagsBadge.style.display = 'none';
+  }
+}
+
+// ─── SEARCH ───────────────────────────────────────────────────────────────────
+let searchTimer;
+function handleSearch(q) {
+  clearTimeout(searchTimer);
+  state.searchQuery = q;
+  searchTimer = setTimeout(() => {
+    if (state.currentView === 'cases') renderCases();
+  }, 250);
+}
+
+// ─── FILTER ───────────────────────────────────────────────────────────────────
+function setFilter(filter, btn) {
+  state.activeFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCases();
+}
+
+// ─── PROGRESS ─────────────────────────────────────────────────────────────────
+function updateProgress() {
+  const total = CASES.length;
+  const answered = Object.keys(state.answered).length;
+  const correct = Object.values(state.answered).filter(v => v === 'correct').length;
+  document.getElementById('progress-pill').textContent = `${answered} / ${total}`;
+  document.getElementById('answered-count').textContent = answered;
+  document.getElementById('correct-count').textContent = correct;
+}
+
+// ─── THEME ────────────────────────────────────────────────────────────────────
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.dataset.theme === 'dark';
+  html.dataset.theme = isDark ? 'light' : 'dark';
+  document.getElementById('theme-toggle').textContent = isDark ? '🌙' : '☀';
+  localStorage.setItem('reum_theme', html.dataset.theme);
+}
+(function initTheme() {
+  const saved = localStorage.getItem('reum_theme');
+  if (saved) {
+    document.documentElement.dataset.theme = saved;
+    document.getElementById('theme-toggle').textContent = saved === 'dark' ? '☀' : '🌙';
+  }
+})();
+
+// ─── SIDEBAR MOBILE ───────────────────────────────────────────────────────────
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('show');
+}
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('overlay').classList.remove('show');
+}
+document.getElementById('overlay').addEventListener('click', closeSidebar);
+
+// Mobile search overlay
+function toggleMobileSearch() {
+  const overlay = document.getElementById('mobile-search-overlay');
+  const isOpen = overlay.classList.toggle('open');
+  if (isOpen) {
+    setTimeout(() => document.getElementById('mobile-search').focus(), 50);
+  } else {
+    // sync value back / clear
+    const val = document.getElementById('mobile-search').value;
+    handleSearch(val);
+  }
+}
+// Close mobile search when clicking outside
+document.addEventListener('click', function(e) {
+  const overlay = document.getElementById('mobile-search-overlay');
+  const btn = document.getElementById('search-icon-btn');
+  if (overlay.classList.contains('open') && !overlay.contains(e.target) && e.target !== btn) {
+    overlay.classList.remove('open');
+  }
+});
+
+// ─── UTILS ────────────────────────────────────────────────────────────────────
+function escHtml(str) {
+  if (!str) return '';
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+</script>
+</body>
+</html>
