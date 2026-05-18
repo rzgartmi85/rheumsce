@@ -1,0 +1,39 @@
+name: Deploy to Firebase
+
+on:
+  push:
+    branches:
+      - main        # deploy on every push to main
+  workflow_dispatch: # allow manual runs from the Actions tab
+
+jobs:
+  deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      # 1. Check out the repo
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Copy site files into the public/ folder Firebase Hosting will serve
+      - name: Prepare public folder
+        run: |
+          mkdir -p public
+          cp index.html public/index.html
+          # Add any other static assets here (images, fonts, etc.)
+
+      # 3. Deploy to Firebase Hosting (and optionally deploy Firestore rules)
+      - name: Deploy to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken:      ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId:      yahakeem-b9349
+          channelId:      live
+          # Also deploy Firestore rules on every push
+          # Remove the next two lines if you prefer to manage rules manually
+        env:
+          FIREBASE_CLI_PREVIEWS: hostingchannels
