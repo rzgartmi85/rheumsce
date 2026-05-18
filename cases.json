@@ -1,0 +1,2842 @@
+{
+  "cases": [
+    {
+      "id": "8663",
+      "chapter": 1,
+      "num": 1,
+      "rule": "Diverticular Disease Rule: IL-6i (e.g., TCZ) & JAKi risk diverticulitis/perforation. Use alternatives first.",
+      "vignette": "A 60-year-old woman with known seropositive CCP-positive rheumatoid arthritis presents to clinic for follow-up. She is currently on methotrexate 20 mg weekly and sulfasalazine 1.5 grams BD and has been so for the last 6 months. Her other comorbidities include hypertension, type 2 diabetes mellitus and previous bowel surgery secondary to diverticulitis five years ago.\n\nCurrently, she has 15 tender joints and 8 swollen joints. Her DAS28 CRP is 6.4 and DAS28-ESR is 6.2. She is counselled on commencing biologic therapy which she is agreeable to. A pre-biologic screen is entirely normal.",
+      "workup": null,
+      "question": "Which biologic therapy should be avoided in this patient?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Abatacept",
+          "pct": 9,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Adalimumab",
+          "pct": 12,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Golimumab",
+          "pct": 2,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Infliximab",
+          "pct": 5,
+          "correct": false
+        },
+        {
+          "letter": "E",
+          "text": "Tocilizumab",
+          "pct": 72,
+          "correct": true
+        }
+      ],
+      "explanation": "All of the above biologic therapies are licensed for use in rheumatoid arthritis. Selection of a biologic therapy should always involve discussion with the patient and should take into account the patient’s comorbidities and other medication. Where possible, an MDT decision can often support selection.\n\nThis patient has active rheumatoid arthritis. She qualifies for biologic therapy based on NICE criteria. Because of her background of diverticular disease, an IL-6 inhibitor such as tocilizumab is best avoided as it may increase the risk of recurrence of diverticulitis, which can then lead to other complications such as bowel perforation. Diverticular disease, however, is not an absolute contraindication, so tocilizumab could still be considered, for example, if all other possible biologic therapies fail. In this patient’s case, this does not apply.\n\nJAK inhibitors also have a similar caution regarding diverticular disease.",
+      "resources": [
+        "Medicines.org.uk (updated Nov 2019). RoActemra 162 mg solution for injection in pre-filled syringe. Summary of Product Characteristics (SmPC) - (emc).",
+        "NICE (2016). Technology appraisal guidance [TA375]: Adalimumab, etanercept, infliximab, certolizumab pegol, golimumab, tocilizumab and abatacept for rheumatoid arthritis not previously treated with DMARDs or after conventional DMARDs only have failed."
+      ]
+    },
+    {
+      "id": "18304",
+      "chapter": 1,
+      "num": 2,
+      "rule": "CKD & DMARDs: Leflunomide is ideal for CKD IV (no dose adjustment). Avoid MTX if .",
+      "vignette": "A 59-year-old woman presented with a two-year history of pain and swelling of multiple joints of both the upper and lower limbs. The pain was present more in the early morning upon waking and eased after 2-3 hours. She had been taking intermittent pain relievers, naproxen 500 mg once or twice daily.\n\nOn examination, she weighed 75 kg and had symmetrical synovitis of the small joints of her hands, wrists, knees, and ankles. She has had type-2 diabetes mellitus over the past eight years on glimepiride 4 mg/day and vildagliptin with metformin (50 mg/500 mg) twice daily. She is a known hypertensive on telmisartan 40 mg and hydrochlorthiazide 12.5 mg daily. She is allergic to penicillin and sulfa drugs. For her joint symptoms, she was evaluated by her rheumatologist recently and the investigations are mentioned below:\n\nwere reduced in size with loss of",
+      "workup": [
+        [
+          "Haemoglobin",
+          "98 g/L",
+          "110 - 140 g/L",
+          true
+        ],
+        [
+          "Total leukocyte count",
+          "8.8 x 109/L",
+          "5.0 - 12.0 x 109/L",
+          false
+        ],
+        [
+          "Neutrophil count",
+          "6.6 x 109/L",
+          "1.5 - 8.0 x 109/L",
+          false
+        ],
+        [
+          "Lymphocyte count",
+          "3.8 x 109/L",
+          "1.5 - 9.5 x 109/L",
+          false
+        ],
+        [
+          "Eosinophil count",
+          "0.2 x 109/L",
+          "0.1 - 1.0 x 109/L",
+          false
+        ],
+        [
+          "Platelets",
+          "580 x 109/L",
+          "150 - 450 x 109/L",
+          true
+        ],
+        [
+          "Serum creatinine",
+          "264 µmol/L",
+          "29 - 53 µmol/L",
+          true
+        ],
+        [
+          "Creatinine clearance",
+          "24 ml/min",
+          "90 - 130 ml/min (varies with age)",
+          true
+        ],
+        [
+          "Serum uric acid",
+          "184 µmol/L",
+          "120 - 142 µmol/L",
+          true
+        ],
+        [
+          "Aspartate aminotransferase (AST)",
+          "32 U/L",
+          "8 - 60 IU/L",
+          false
+        ],
+        [
+          "Alanine aminotransferase (ALT)",
+          "36 U/L",
+          "0 - 29 IU/L",
+          true
+        ],
+        [
+          "Serum albumin",
+          "3.8 g/L",
+          "35 - 50 g/L",
+          true
+        ],
+        [
+          "Erythrocyte sedimentation rate (ESR)",
+          "98 mm/hour",
+          "0 - 20 mm/hr",
+          true
+        ],
+        [
+          "C-reactive protein (CRP)",
+          "48 mg/L",
+          "< 5 mg/L",
+          true
+        ],
+        [
+          "Rheumatoid factor",
+          "80 U/ML",
+          "0-20 U/ML",
+          true
+        ],
+        [
+          "Anti-citrullinate protein antibody (ACPA)",
+          "> 200 U/ML",
+          "0-20 U/ML",
+          true
+        ],
+        [
+          "Peripheral smear",
+          "Microcytic hypochromic; no immature",
+          "",
+          false
+        ],
+        [
+          "USG abdomen and pelvis",
+          "Grade 1 fatty liver; both kidneys",
+          "",
+          false
+        ]
+      ],
+      "question": "What is the ideal disease-modifying drug for this patient?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Start on hydroxychloroquine at 400 mg/day and methotrexate at 10 mg per week",
+          "pct": 30,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Start on leflunomide at 20 mg/day",
+          "pct": 18,
+          "correct": true
+        },
+        {
+          "letter": "C",
+          "text": "Start on methotrexate at 15 mg per week",
+          "pct": 22,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Start on prednisolone only at 10 mg/day",
+          "pct": 17,
+          "correct": false
+        },
+        {
+          "letter": "E",
+          "text": "Start on sulfasalazine at 1g/day and titrate the dose",
+          "pct": 13,
+          "correct": false
+        }
+      ],
+      "explanation": "This patient has active rheumatoid arthritis (RA) with co-existing chronic kidney disease (CKD) [(stage 4 - creatinine clearance (15-30 ml/min)]. Among the available options, leflunomide is the ideal drug with nil renal excretion. It can be used without any dose modification in all stages of CKD except stage V (due to a lack of data on end-stage renal disease). Sulfasalazine has 10-15% renal excretion and can be used in CKD stages I-III. In stages IV and V, it has to be started at a lower dose with caution. This patient is allergic to sulfa drugs, so it cannot be used. Hydroxychloroquine needs dose adjustments in stage III (75% of the dose) and stage IV/V (25-50% of the dose). Methotrexate needs dose adjustment (50-100%, maximum of 15 mg/week) in stage III, and is contraindicated in stage IV and V CKD. Hence, methotrexate and hydroxychloroquine are not ideal in this patient with active RA and stage IV CKD.",
+      "resources": [
+        "Harty T, O'Shaughnessy M, Harney S. Therapeutics in rheumatology and the kidney. Rheumatology (Oxford). 2023 Mar 1;62(3):1009-1020. doi: 10.1093/rheumatology/keac460. PMID: 35951751.",
+        "Chaplin, S. (2018). Prescribing and monitoring non-biological DMARDs. Prescriber, 29(2), 29-32. https://doi.org/10.1002/psb.1650."
+      ]
+    },
+    {
+      "id": "12432",
+      "chapter": 1,
+      "num": 3,
+      "rule": "US in RA Rule: RA shows hypoechoic synovitis with PDUS hyperaemia and marginal erosions (classically 2nd/5th MCP, 5th MTP, distal ulna), unlike the central erosions in OA.",
+      "vignette": "A 70-year-old woman comes to the rheumatology outpatient department with a 1-year history of early morning stiffness lasting for 20-25 minutes and pain in both finger joints, especially the PIP joints.\n\nOn examination, you find minimal puffiness of the fingers bilaterally without any appreciable synovitis. You could palpate some Heberden and Bouchard nodes. At this point, you do not have access to the patient's baseline immunological investigations, so you decide to perform a bedside ultrasound scan to assess for inflammation. She does complain of mechanical pain in her knees but is otherwise pain-free in her other joints.\n\nThe ultrasound images of MCP joints can be seen below:",
+      "workup": null,
+      "question": "What is the most likely diagnosis?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Chronic polyarticular gout",
+          "pct": 18,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Hand osteoarthritis",
+          "pct": 43,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Psoriatic arthritis",
+          "pct": 3,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Rheumatoid arthritis",
+          "pct": 23,
+          "correct": true
+        },
+        {
+          "letter": "E",
+          "text": "Rs3PE",
+          "pct": 14,
+          "correct": false
+        }
+      ],
+      "explanation": "The most likely diagnosis is rheumatoid arthritis. The question tests the interpretation of ultrasound findings in such patients and highlights the importance of a bedside ultrasound scan in detecting inflammation, which is critical for starting therapy. Although there is a background presence of osteoarthritis, and although it might be tempting to label it as osteoarthritis given the clinical picture, the presence of synovitis and typical marginal erosion (as pointed out by the thick and thin grey arrows, respectively) are classical of rheumatoid arthritis. Ultrasonography in the (a) longitudinal and (b) transverse planes show signs of destruction (grade 2). Synovial hypertrophy is seen as poorly compressible, hypoechoic (relative to subdermal fat) intracapsular structure (i.e., seen within the joint capsule on grayscale (GS) image), whereas active inflammation can be seen as increased signals (red spot) suggestive of hyperaemia seen on power doppler ultrasound (PDUS). It should be noted that fluid in the joint is anechoic without any signals on PDUS. The severity of synovitis is determined by a scoring system proposed by EULAR/OMERACT task force, wherein grade 0 to 3 stands for normal, mild, moderate, and severe synovitis respectively (using both GS and PD images).\n\nAlthough the presence of bone erosions was classically thought to be specific for RA, it can be found in quite a lot of osteoarthritis cases. The location and size, particularly larger erosions at the second and fifth metacarpophalangeal joints, fifth metatarsophalangeal joint, and distal ulna, may point towards RA. Bone erosion in RA is typically marginal while it is central in osteoarthritis.",
+      "resources": [
+        "Kaeley, G.S., Bakewell, C. & Deodhar, A. The importance of ultrasound in identifying and differentiating patients with early inflammatory arthritis: a narrative review. Arthritis Res Ther 22, 1 (2020). https://doi.org/10.1186/s13075-019-2050-4.",
+        "Image source: Marcin Szkudlarek, Mette Klarlund, Eva Narvestad, Michel Court-Payen, Charlotte Strandberg, Karl E Jensen, Henrik S Thomsen and Mikkel Østergaard."
+      ]
+    },
+    {
+      "id": "18846",
+      "chapter": 1,
+      "num": 4,
+      "rule": "IBD & Biologics Rule: IL-17i (e.g., Secukinumab) is contraindicated in active Crohn’s;",
+      "vignette": "A 40-year-old man was referred for evaluation by the Rheumatology Nurse Specialist. He was diagnosed with psoriatic arthritis 4 years ago. His symptoms were well controlled until last winter. Currently, he has gross worsening of joint symptoms with 14 tender joints and 5 swollen joints (left ankle, bilateral knees and multiple metacarpophalangeal joints). He is on methotrexate 17.5 mg weekly, folic acid 5 mg weekly, prednisolone 5 mg daily, vitamin D 1000 units daily, ibuprofen 400 mg and omeprazole 20 mg on a PRN basis. After a discussion with the patient, a decision was made to start him on a biologic.\n\nHe also revealed that he has been under investigation for a few episodes of intermittent bloody diarrhoea for the last 18 months. He has had five episodes up to now. The very first episode was attributed to food poisoning. He also had a perianal abscess, which has been attended to by the surgical colleagues twice. He has recently undergone a colonoscopy and biopsy and he is awaiting to see the surgical team next week to review his biopsy results.\n\nHis investigations are as follows:\n\nin the terminal ileum, ileocecal region and\n\ndescending colon with grossly normal areas in\n\ntransverse colon, descending colon, and sigmoid\n\ncolon have areas of intestinal wall thickening to\n\nis present, suggestive of inflammatory bowel disease.",
+      "workup": [
+        [
+          "White blood cells",
+          "8.5 x 109/L",
+          "3.6 - 11 x 109/L",
+          false
+        ],
+        [
+          "Neutrophils",
+          "66%",
+          "50 - 75%",
+          false
+        ],
+        [
+          "Lymphocytes",
+          "33%",
+          "20 - 40%",
+          false
+        ],
+        [
+          "Haemoglobin",
+          "104 g/l",
+          "115 - 165 g/l",
+          true
+        ],
+        [
+          "MCV",
+          "96 fl",
+          "80 - 95 fl",
+          true
+        ],
+        [
+          "Platelets",
+          "317 x 109/L",
+          "140 - 400 x 109/L",
+          false
+        ],
+        [
+          "ESR",
+          "52 mm/hr",
+          "5 - 15 mm/hr",
+          true
+        ],
+        [
+          "CRP",
+          "18 mg/L",
+          "< 10 mg/L",
+          true
+        ],
+        [
+          "Creatinine",
+          "95 µmol/L",
+          "60 - 110 µmol/L",
+          false
+        ],
+        [
+          "TSH",
+          "3.4 mU/L",
+          "0.4 - 4 mU/L",
+          false
+        ],
+        [
+          "Colonoscopy",
+          "Scattered aphthous ulcers are present",
+          "",
+          false
+        ],
+        [
+          "CT scan of the abdomen and pelvis",
+          "The jejunum, ileum, ileocecal junction,",
+          "",
+          false
+        ],
+        [
+          "Biopsy",
+          "Chronic active submucosal granulomatous inflammation",
+          "",
+          false
+        ]
+      ],
+      "question": "Which biologic should be avoided in this patient?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Adalimumab",
+          "pct": 11,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Certolizumab",
+          "pct": 3,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Infliximab",
+          "pct": 12,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Secukinumab",
+          "pct": 62,
+          "correct": true
+        },
+        {
+          "letter": "E",
+          "text": "Ustekinumab",
+          "pct": 12,
+          "correct": false
+        }
+      ],
+      "explanation": "This patient has active psoriatic arthritis and a biologic is indicated. There is also evidence of active Crohn's disease. IL 17 inhibitors are contraindicated in active Crohn's disease and must be used with caution in patients with stable Crohn’s under close supervision. Adalimumab, infliximab, golimumab, ustekinumab, tofacitinib, or upadacitinib can be used with patients with severe Crohn’s.",
+      "resources": [
+        "Laura Tucker, Alexander Allen, David Chandler, Coziana Ciurtin, Andrew Dick, Amy Foulkes, Nicola Gullick, Philip Helliwell, Deepak Jadon, Gareth Jones, Stuart Kyle, Vishnu Madhok, Neil McHugh, Andrew Parkinson, Tim Raine, Stefan Siebert, Catherine Smith, William Tillett, Laura C Coates, The 2022 British Society for Rheumatology guideline for the treatment of psoriatic arthritis with biologic and targeted synthetic DMARDs, Rheumatology, Volume 61, Issue 9, September 2022, Pages e255–e266.",
+        "Deng Z, Wang S, Wu C, Wang C, IL-17 inhibitor-associated inflammatory bowel disease: A study based on literature and database analysis, Front. Pharmacol., 23 March 2023 Sec. Gastrointestinal and Hepatic Pharmacology, Volume 14 - 2023."
+      ]
+    },
+    {
+      "id": "400",
+      "chapter": 1,
+      "num": 5,
+      "rule": "Start anti-TNF if ≥3 swollen and ≥3 tender joints (dactylitis = 1) after failing ≥2 DMARDs. Record baseline global assessments and PASI.",
+      "vignette": "A 36-year-old gentleman with psoriatic arthritis for 10 years attends rheumatology outpatients for follow-up. He currently takes subcutaneous methotrexate 25mg weekly, having previously been intolerant of oral methotrexate due to nausea. 5 years ago he failed to improve after taking sulfasalazine for 9 months. He was seen 1 month ago by the rheumatology clinical nurse specialist, who found swelling and tenderness in his right knee, left ankle, and both wrists.\n\nHe currently reports pain and swelling of his left ankle, right knee, both wrists, right index finger and left little finger. Clinical examination confirms synovitis and tenderness of these joints.",
+      "workup": null,
+      "question": "Which of the following is the most appropriate treatment for this patient?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Ciclosporin",
+          "pct": 2,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Etanercept",
+          "pct": 85,
+          "correct": true
+        },
+        {
+          "letter": "C",
+          "text": "Hydroxychloroquine",
+          "pct": 3,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Leflunomide",
+          "pct": 9,
+          "correct": false
+        },
+        {
+          "letter": "E",
+          "text": "PUVA therapy and Leflunomide",
+          "pct": 2,
+          "correct": false
+        }
+      ],
+      "explanation": "This gentleman meets BSR criteria for anti-TNF therapy with greater than three swollen joints and greater than three tender joints. Dactylitis counts as one joint. Before initiation of anti-TNF therapy, it is also recommended that baseline readings for patient and physician global assessments (Likert scales 0-5), tender and swollen joint counts and PASI (Psoriasis Area Severity Index) are recorded.",
+      "resources": [
+        "Kyle S. et al (2005) Guideline for anti-TNFa therapy in psoriatic arthritis. Rheumatology 44: 390-397."
+      ]
+    },
+    {
+      "id": "8038",
+      "chapter": 1,
+      "num": 6,
+      "rule": "GPA Induction Rule: Use IV pulsed CYC + oral steroids for severe/sight-threatening GPA. Diagnosis requires ≥2 ACR criteria: nasal/oral signs, CXR nodules, microhaematuria, or granulomatous biopsy.",
+      "vignette": "A 56-year-old woman is referred to the clinic with a two-month history of deteriorating and painful left-sided eye protrusion. She also described joint pains, a 3 kg unintentional weight loss and irritating cough. On further questioning, she was aware of some nasal crusting and discharge.\n\nOn examination, there was left-sided exophthalmos associated with some lateral gaze diplopia. Pulse was 85 bpm and blood pressure 132/88 mmHg.\n\nOf note in the blood tests, U+Es were normal, urinalysis was normal and proteinase 3 and ANCA were positive. CT of the orbits revealed a pseudotumour of the left orbit.",
+      "workup": null,
+      "question": "What would be the most appropriate treatment for this patient?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "2 cycles of IV rituximab",
+          "pct": 9,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Oral azathioprine",
+          "pct": 1,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Plasma exchange",
+          "pct": 3,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Pulsed cyclophosphamide fortnightly plus oral glucocorticoids",
+          "pct": 64,
+          "correct": true
+        },
+        {
+          "letter": "E",
+          "text": "Pulsed IV prednisolone followed by oral prednisolone",
+          "pct": 23,
+          "correct": false
+        }
+      ],
+      "explanation": "This patient has Wegener’s (granulomatosis with polyangiitis) as suggested by the arthritis, nasal involvement and pseudotumour of the left orbit. According to the American College of Rheumatology, criteria for the diagnosis of GPA include (1) nasal or oral inflammation, (2) respiratory radiographic abnormalities consistent with respiratory tissue destruction (e.g. nodules, infiltrates and cavities), (3) microhematuria or red blood cell casts on urinary sediment analysis and (4) granulomatous inflammation on biopsy for pathology. There is a roughly 90% sensitivity and specificity for the diagnosis when two of the four criteria are met. Antineutrophil cytoplasmic antibody serologies for cytoplasmic ANCA reactive against proteinase 3, as well as perinuclear ANCA reactive against myeloperoxidase, are highly useful in GPA diagnosis with positive cANCA being highly specific and sensitive. The most appropriate approach to treatment is with IV pulsed cyclophosphamide together with oral steroids, which is successful in 90% of cases with roughly 75% achieving disease remission. Rituximab is also an option but can be slower-acting.",
+      "resources": [
+        "Muller, K. and Lin, J. H. (2014). Orbital granulomatosis with polyangiitis (Wegener granulomatosis): clinical and pathologic findings. Archives of Pathology and Laboratory Medicine, 138(8), pp. 1110–1114."
+      ]
+    },
+    {
+      "id": "548",
+      "chapter": 1,
+      "num": 7,
+      "rule": "Early RA Rule: Start MTX monotherapy + bridging steroids (even if severe/erosive). Biologics require failing 2 DMARDs (6 months each). Prioritize tight monitoring and treat-to-target.",
+      "vignette": "A 32-year-old woman presents with severe synovitis of PIPs, MCPs, wrists, left shoulder and knee and MTPs. She has a family history of rheumatoid arthritis in both her mother and maternal aunt. Her GP has already arranged investigations which reveal:\n\nHer DAS 28 is as follows:\n\nOn x-ray, there are erosions of the 3rd and 4th MTPs.",
+      "workup": [
+        [
+          "ESR",
+          "66",
+          "(0-10)",
+          true
+        ],
+        [
+          "CRP",
+          "32 mg/l",
+          "(<10 mg/l)",
+          true
+        ],
+        [
+          "RF",
+          "160",
+          "(positive >20)",
+          false
+        ],
+        [
+          "anti-CCP",
+          ">200iu",
+          "(positive >20iu)",
+          false
+        ],
+        [
+          "Swollen joints",
+          "16",
+          "",
+          false
+        ],
+        [
+          "Tender joints",
+          "19",
+          "",
+          false
+        ],
+        [
+          "Patients VAS",
+          "79",
+          "",
+          false
+        ],
+        [
+          "ESR",
+          "66",
+          "",
+          false
+        ],
+        [
+          "Total",
+          "7.61",
+          "",
+          false
+        ]
+      ],
+      "question": "With which of the following would you commence therapy?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Anti CD20 monoclonal antibody therapy",
+          "pct": 0,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Anti-TNF alpha therapy",
+          "pct": 3,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Methotrexate alone",
+          "pct": 3,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Prednisolone alone",
+          "pct": 0,
+          "correct": false
+        },
+        {
+          "letter": "E",
+          "text": "Prednisolone and Methotrexate",
+          "pct": 93,
+          "correct": true
+        }
+      ],
+      "explanation": "The guidance has recently changed where combination therapy was considered the best approach for moderate-to-severe onset RA (ie. seropositive, erosive at presentation, high inflammatory markers at presentation)and now monotherapy, especially with Methotrexate as first-line, is advocated. Steroids are certainly implicated in this scenario to gain prompt control while awaiting the response to the methotrexate. Tight monitoring of disease and rapid alteration of therapy according to the DAS score in the first year of care seemed to be more important than the combination of DMARDs used. With this in mind, NICE guidance recommends a step-down approach rather than a step-up approach to early treatment with DMARDs meaning that it is more important to treat early and aggressively, where possible than to switch through several DMARD monotherapies hoping to achieve control. According to NICE guidance unless a patient has undergone trials of two disease-modifying anti-rheumatic drugs (DMARDs), including methotrexate (unless contraindicated) biologic therapies should not be given. A trial of a DMARD is defined as being normally 6 months, with 2 months at standard dose unless significant toxicity has limited the dose or duration of treatment.",
+      "resources": [
+        "Rheumatoid arthritis in adults: management (2018) NICE guideline NG100."
+      ]
+    },
+    {
+      "id": "8692",
+      "chapter": 1,
+      "num": 8,
+      "rule": "Seronegative RA Rule: High urate is a \"red herring.\" Symmetric polyarthritis + US synovitis (without tophi/double-contour sign) = Seronegative RA",
+      "vignette": "A 56-year-old male builder presents with a several-month history of persistent bilateral MCP pain. He has a past medical history of hypertension and ischaemic heart disease. He is on bisoprolol 5mg and furosemide 40mg. He drinks 2 pints of beer a night. There is no family history. On examination, his weight is 120kg, height is 178 cm. He has no obvious synovitis but is tender over his MCPs.\n\nHis bloods show the following:\n\nAn ultrasound scan of his 2nd metacarpophalangeal joint shows the following:",
+      "workup": [
+        [
+          "Hb",
+          "118 g/L",
+          "115–165 g/L",
+          false
+        ],
+        [
+          "MCV",
+          "92 f/L",
+          "80–100 f/L",
+          false
+        ],
+        [
+          "Neutrophils",
+          "8.1 x 109/L",
+          "1.8–7.0 x 109/L",
+          true
+        ],
+        [
+          "Platelets",
+          "421 x 109/L",
+          "140–400 x 109/L",
+          true
+        ],
+        [
+          "CRP",
+          "12 mg/L",
+          "<10 mg/L",
+          true
+        ],
+        [
+          "Urate",
+          "501 µmol/L",
+          "200–430 µmol/L",
+          true
+        ],
+        [
+          "Sodium",
+          "138 mmol/L",
+          "137–144 mmol/L",
+          false
+        ],
+        [
+          "Potassium",
+          "4.5 mmol/L",
+          "3.5–4.9 mmol/L",
+          false
+        ],
+        [
+          "Urea",
+          "7.2 mmol/L",
+          "2.5–7.0 mmol/L",
+          true
+        ],
+        [
+          "Creatinine",
+          "114 µmol/L",
+          "60–110 µmol/L",
+          true
+        ],
+        [
+          "ALT",
+          "58 IU/L",
+          "5–35 IU/L",
+          true
+        ],
+        [
+          "ALP",
+          "150 µmol/L",
+          "45–105 µmol/L",
+          true
+        ],
+        [
+          "Bilirubin",
+          "14 µmol/L",
+          "1–22 µmol/L",
+          false
+        ],
+        [
+          "ANA",
+          "Negative",
+          "",
+          false
+        ],
+        [
+          "Rheumatoid factor",
+          "<10 IU/mL",
+          "<20 IU/mL",
+          false
+        ],
+        [
+          "Anti-CCP",
+          "<1 U/mL",
+          "<7 U/mL",
+          false
+        ]
+      ],
+      "question": "What is the diagnosis?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Gout",
+          "pct": 63,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Non-inflammatory mechanical joint pain",
+          "pct": 8,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Osteoarthritis",
+          "pct": 8,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Seronegative rheumatoid arthritis",
+          "pct": 21,
+          "correct": true
+        },
+        {
+          "letter": "E",
+          "text": "SLE",
+          "pct": 0,
+          "correct": false
+        }
+      ],
+      "explanation": "This patient presents with clinical features of symmetrical polyarthropathy in a rheumatoid distribution. Although he drinks alcohol and has a high urate level, there is no suggestion in the history that he has inter critical arthritis typical of this. The ultrasound shows grey scale 3 synovitis (the black area highlighted by the white arrow below) which suggests inflammatory disease. There are no obvious osteophytes.\n\nSource: Author’s image.",
+      "resources": [
+        "Bruyn, G.A., Iagnocco, A., Naredo, E., Balint, P.V., Gutierrez, M., Hammer, H.B., Collado, P., Filippou, G., Schmidt, W.A., Jousse-Joulin, S. and Mandl, P. (2019). OMERACT definitions for ultrasonographic pathologies and elementary lesions of rheumatic disorders 15 years on. The Journal of Rheumatology, 46(10), pp. 1388–1393."
+      ]
+    },
+    {
+      "id": "8694",
+      "chapter": 1,
+      "num": 9,
+      "rule": "Gout Microscopy Rule: Urate: Needle-shaped & negatively birefringent (Yellow = Parallel/East-West; Blue = Perpendicular/North-South). CPPD: Rhomboid & positively birefringent.",
+      "vignette": "An 80-year-old man presents to the emergency department with an erythematous, swollen left knee. He has a past medical history of hypertension, ischaemic heart disease and recurrent urinary tract infections. His temp is 37.8°C. His bloods are:\n\nA joint aspirate is shown below:",
+      "workup": [
+        [
+          "Hb",
+          "121 g/L",
+          "115–165 g/L",
+          false
+        ],
+        [
+          "MCV",
+          "81 fL",
+          "80–100 fL",
+          false
+        ],
+        [
+          "Neutrophils",
+          "11.2 x 109/L",
+          "1.8–7.0 x 109/L",
+          true
+        ],
+        [
+          "Platelets",
+          "438 x 109/L",
+          "140–400 x 109/L",
+          true
+        ],
+        [
+          "CRP",
+          "150 mg/L",
+          "<10 mg/L",
+          true
+        ],
+        [
+          "Urate",
+          "402 µmol/L",
+          "200–430 µmol/L",
+          false
+        ],
+        [
+          "Sodium",
+          "137 mmol/L",
+          "137–144 mmol/L",
+          false
+        ],
+        [
+          "Potassium",
+          "4.3 mmol/L",
+          "3.5–4.9 mmol/L",
+          false
+        ],
+        [
+          "Urea",
+          "3.8 mmol/L",
+          "2.5–7.0 mmol/L",
+          false
+        ],
+        [
+          "Creatinine",
+          "130 µmol/L",
+          "60–110 µmol/L",
+          true
+        ],
+        [
+          "ALT",
+          "39 IU/L",
+          "5–35 IU/L",
+          true
+        ],
+        [
+          "ALP",
+          "110 µmol/L",
+          "45–105 µmol/L",
+          true
+        ],
+        [
+          "Bilirubin",
+          "18 µmol/L",
+          "1–22 µmol/L",
+          false
+        ],
+        [
+          "ANA",
+          "Negative",
+          "",
+          false
+        ],
+        [
+          "Rheumatoid factor",
+          "54 IU/mL",
+          "<20",
+          true
+        ],
+        [
+          "Anti-CCP",
+          "3 U/mL",
+          "<7 U/mL",
+          false
+        ]
+      ],
+      "question": "What is the diagnosis?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Calcium pyrophosphate disease",
+          "pct": 12,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Gout",
+          "pct": 83,
+          "correct": true
+        },
+        {
+          "letter": "C",
+          "text": "Gram-negative sepsis",
+          "pct": 2,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Gram-positive sepsis",
+          "pct": 1,
+          "correct": false
+        },
+        {
+          "letter": "E",
+          "text": "Hydroxyapatite crystals",
+          "pct": 2,
+          "correct": false
+        }
+      ],
+      "explanation": "The microscopy shows needle-shaped crystals, which are typical of gout. Urate crystals have a negative birefringence to polarised light, and this depends on the direction the crystals are facing (note that the north-south crystals are blue; east-west crystals are yellow). Calcium pyrophosphate crystals are rhomboid. Hydroxyapatite crystals are not seen under conventional microscopy.",
+      "resources": [
+        "Pascual, E., Batlle-Gualda, E., Martínez, A., Rosas, J. and Vela, P. (1999). Synovial fluid analysis for diagnosis of inter critical gout. Annals of Internal Medicine, 131(10), pp. 756–759."
+      ]
+    },
+    {
+      "id": "12407",
+      "chapter": 1,
+      "num": 10,
+      "rule": "Pregnancy DMARD Rule: Switch MTX to Sulfasalazine (safe + 5mg folic acid) at least 4 weeks pre-conception; Hydroxychloroquine is safe but less potent, while Tocilizumab requires a 3-month washout.",
+      "vignette": "A 35-year-old woman, who has known rheumatoid arthritis, informs you that she wishes to become pregnant. She was diagnosed 3 years ago and has been in remission for the last 15 months. The patient’s Disease Activity Score 28 (DAS28) CRP in the clinic today is 0.8. Currently, she is on methotrexate 17.5 mg weekly, folic acid 5 mg weekly, and a Vitamin E supplement, which she buys over the counter for hair loss. She was discontinued on hydroxychloroquine previously as it caused troublesome skin patches, which took many months to fully clear.\n\nShe informs you that she is very concerned about a flare of her arthritis as well as her medication harming the baby. She is very keen not to change her medications as it has taken a long time for her to achieve remission unless it harms the baby. She has two kids who are 5 and 7 years of age, respectively.",
+      "workup": null,
+      "question": "What is the recommended treatment plan for this patient?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Continue methotrexate and omit once the pregnancy is confirmed and start on sulfasalazine",
+          "pct": 1,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Omit methotrexate for at least 4 weeks in advance and restart her on hydroxychloroquine",
+          "pct": 3,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Omit methotrexate for at least 4 weeks in advance and start her on low dose prednisolone and vitamin D",
+          "pct": 5,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Omit methotrexate for at least 4 weeks in advance and start her on sulfasalazine with supplementary folic acid",
+          "pct": 90,
+          "correct": true
+        },
+        {
+          "letter": "E",
+          "text": "Omit methotrexate for at least 4 weeks in advance and start her on tocilizumab",
+          "pct": 1,
+          "correct": false
+        }
+      ],
+      "explanation": "Planning pregnancy for patients on DMARDs can be tricky. The disease remission should be maintained and the patient must be on medications that are proven safe for the foetus. The guidance for prescribing DMARDs in pregnancy is mentioned in the 2016 BSR and BHPR guidelines on prescribing drugs in pregnancy and breastfeeding.\n\nMethotrexate is contraindicated in pregnancy and should be at least 4 weeks in advance to avoid the fetotoxic effects. Although hydroxychloroquine is safe in pregnancy, this is not an ideal option as this patient already had a dermatological issue which took months to settle. On the other hand, it will not have the potency to replace the effect of such a dose of methotrexate. Sulfasalazine is safe in pregnancy (with 5 mg of folic acid) and will be the best option for her. Tocilizumab should be stopped 3 months in advance as it is not deemed to be safe during pregnancy.",
+      "resources": [
+        "Flint, J Panchal, S Hurrell, A et al, (2016), BSR and BHPR guideline on prescribing drugs in pregnancy and breastfeeding—Part I: standard and biologic disease-modifying anti-rheumatic drugs and corticosteroids, Rheumatology, Volume 55, Issue 9, Pages 1693–1697"
+      ]
+    },
+    {
+      "id": "11409",
+      "chapter": 1,
+      "num": 11,
+      "rule": "Leflunomide Pregnancy Rule: Perform washout with Cholestyramine 8g TDS for 11 days; confirm levels are <0.02 mg/L on two separate tests (at least 14 days apart) before conceiving.",
+      "vignette": "A 28-year-old woman is on 10mg leflunomide OD for rheumatoid arthritis and approaches you with plans to get pregnant.",
+      "workup": null,
+      "question": "What would you advise?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Cholestyramine 8g TDS washout for 11 days and leflunomide levels must be checked twice before trying to conceive",
+          "pct": 66,
+          "correct": true
+        },
+        {
+          "letter": "B",
+          "text": "Cholestyramine 8g TDS washout for 11 days and wait for 2 weeks after this before trying to conceive",
+          "pct": 14,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Stop leflunomide for 3 months prior to trying to conceive",
+          "pct": 6,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Stop leflunomide for 6 months prior to conceiving",
+          "pct": 3,
+          "correct": false
+        },
+        {
+          "letter": "E",
+          "text": "This patient should not try conceiving for at least 2 years prior to stopping leflunomide",
+          "pct": 10,
+          "correct": false
+        }
+      ],
+      "explanation": "According to the summary of product characteristics, following the washout procedures, verification by 2 separate tests at an interval of at least 14 days and a waiting period of one-and-a-half months between the first occurrence of a plasma concentration below 0.02 mg/L and fertilisation is required.",
+      "resources": [
+        "Arava, INN-leflunomide. Summary of Product Characteristics"
+      ]
+    },
+    {
+      "id": "11374",
+      "chapter": 1,
+      "num": 12,
+      "rule": "Rheumatoid Vasculitis Rule: Chronic, \"burnt-out\" RA (wrist ankylosis, MCP erosions, DIP sparing) plus systemic signs (foot drop/mononeuritis, leg ulcers, nail fold infarcts) indicates Rheumatoid Vasculitis, a severe extra-articular complication often linked to smoking and untreated disease.",
+      "vignette": "A 70-year-old woman has had a leg ulcer on her left leg for a month which has not healed despite antibiotics prescribed by her general practitioner (GP). She is now admitted to the Acute Medicine Unit after tripping over and falling in her bathroom, and the Acute Medical doctors noted that she had a right foot drop which probably contributed to her fall.\n\nHer only past medical history, according to her son, is an arthritic disease, diagnosed about 15 years ago when she was given some medications. However, she had stopped taking her medications after a few months due to gastric intolerance. She is currently only taking doxycycline prescribed by her GP. She also has a 20-pack-year smoking history.\n\nThe Acute Medicine consultant requests an opinion from you, the on-call Rheumatologist, to diagnose her underlying arthritic disease and has, helpfully, already done an X-ray of her left hand with the most severe deformities.\n\nOn examination, the patient is alert but confused, with a temperature of 38oC, a pulse rate of 110/min, blood pressure of 150/90 mmHg and a respiratory rate of 21/min.\n\nBilateral nail fold infarcts are noted. A right foot drop is noted. The patient’s left eye is congested and oedematous. A punched-out 7cm ulcer is noted over the left medial malleolus with surrounding erythema.\n\nA cardiorespiratory examination is unremarkable.\n\nMusculoskeletal examination: Severe muscle wasting of both hands and feet along with deformities noted. No active synovial inflammation is noted.\n\nHer left-hand X-ray is shown below:",
+      "workup": null,
+      "question": "What is the likely underlying arthritic disease in this patient?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Arthritis mutilans",
+          "pct": 16,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Erosive osteoarthritis",
+          "pct": 4,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Gout",
+          "pct": 0,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Rheumatoid arthritis",
+          "pct": 63,
+          "correct": true
+        },
+        {
+          "letter": "E",
+          "text": "Systemic lupus erythaematosus with Jaccoud’s arthropathy",
+          "pct": 17,
+          "correct": false
+        }
+      ],
+      "explanation": "(Distal interphalangeal -DIP, Proximal interphalangeal -PIP, Metacarpophalangeal – MCP, CMC- carpometacarpal)\n\nThe hand X-rays show severe osteopenia, volar subluxation at the wrist ( lateral view), severe carpal /wrist ankylosis, a Boutonniere deformity(Flexed PIP, extended DIP), erosive disease of the metacarpal base and heads, erosions and dislocation of the 2nd MCP joint, 3rd -5th MCP joint and PIP arthritides with symmetric joint space loss, subluxation of the 1st CMC joint and Nalebuff Type-3 rheumatoid thumb deformity (swan neck thumb deformity) with sparing of the DIP joints, all consistent with chronic established rheumatoid arthritis.\n\nImage source: Author.\n\nRed circle: severe carpal /wrist ankylosis\n\nGreen arrow: subluxation of the 1st CMC joint\n\nPink arrows: Nalebuff Type- 3 rheumatoid thumb deformity ( swan neck thumb deformity)\n\nYellow arrow: erosions and dislocation of the 2nd MCP joint\n\nBlack rectangle: erosive disease of the metacarpal heads, 2nd -5th MCP arthritis\n\nBlue rectangles: PIP erosive arthritis\n\nPurple arrows: Relatively preserved DIP joints\n\nThe image next to the annotated hand -x ray is an x-ray of a normal hand for comparison; not only is there gross erosive disease of the patient’s hand evident, but the diffuse osteopenia can also be appreciated when compared.\n\nImage source: Author\n\nRed rectangle: volar subluxation at the wrist\n\nBlue rectangle: a Boutonniere deformity( Flexed PIP, extended DIP)\n\nThis patient’s clinical presentation with acute mononeuritis, possible scleritis, digital nail fold infarcts, constitutional symptoms, non-healing leg ulcer, features of ‘burnt-out’ rheumatoid arthritis with deformities which has been untreated for 14-15 years with typical deformities all point to a diagnosis of rheumatoid vasculitis(RV). Her smoking history also increases her risk for RV.\n\nGouty arthritis can be associated with punched-out erosions (mouse-bitten) with sclerotic overhanging edges but usually preserved joint space until very late.\n\nJaccoud arthropathy is characterised by lax deformities of the joints which are voluntarily correctable by patients without erosive articular disease in the X-rays. It is usually associated with recurrent rheumatic fever but is also seen in patients with SLE (5%) and occasionally in other auto-immune diseases.\n\nErosive osteoarthritis is unlikely given the severe erosive disease, wrist ankylosis and sparing of DIP in this patient.\n\nArthritis mutilans, which is a severe deforming and destructive arthritis, is seen in about 5% of patients with psoriatic arthritis (PsA) and is characterised by osteolysis of the bone and marked destruction of the digits with shortening. The typical erosive RA appearance with DIP sparing in this patient is against PsA and the evolution into current acute vasculitis also is consistent with rheumatoid arthritis.",
+      "resources": [
+        "Neumeister, M. Hand and Wrist Surgery in Rheumatoid Arthritis, Medscape, 2023.",
+        "Santiago MB, Galvão V. Jaccoud arthropathy in systemic lupus erythematosus: analysis of clinical characteristics and review of the literature. Medicine (Baltimore). 2008 Jan;87(1):37-44. doi: 10.1097/MD.0b013e3181632d18. PMID: 18204369.",
+        "Neumeister, M. Hand and Wrist Surgery in Rheumatoid Arthritis, Medscape, 2021.",
+        "Martínez D. Jaccoud's arthropathy revisited. Bol Asoc Med P R. 2008 Jul-Sep;100(3):51-3. PMID: 19227718.",
+        "Mittermayer B. Santiago, Jaccoud’s arthropathy, Best Practice & Research Clinical Rheumatology, Volume 25, Issue 5, 2011, Pages 715-725, ISSN 1521-6942, https://doi.org/10.1016/j.berh.2011.10.018.",
+        "Bell, L. Murphy, C-L. Wynne, B. Cunnane, G. Acute Presentation of Arthritis Mutilans, The Journal of Rheumatology January 2011, 38 (1) 174-175; DOI: https://doi.org/10.3899/jrheum.100579."
+      ]
+    },
+    {
+      "id": "11647",
+      "chapter": 1,
+      "num": 13,
+      "rule": "PsA Management Rule: For axial PsA with extensive skin disease, Secukinumab (IL-17i) is preferred over TNF inhibitors for superior skin efficacy; MTX/SSZ are ineffective for axial symptoms.",
+      "vignette": "A 39-year-old man presented to your clinic with a two-year history of intermittent low back pain, which was experienced in the early morning on waking. At times, the pain was severe enough that it disturbed his sleep. The patient advised that the pain eased after 1 hour of being awake. He described a history of pain and swelling in multiple joints of his upper and lower limbs and skin psoriasis for the past 5 years, for which he was on topical medications. There was a recent worsening of the skin lesions.\n\nOn examination he had swelling and tenderness of the right ankle and left wrist. He had extensive psoriatic lesions over his scalp, trunk and both lower limbs. He was started on etoricoxib 90 mg once daily, apremilast (titrated to 30 mg twice daily) with methotrexate 10 mg per week. After 12 weeks of review, he felt symptomatically better with a reduction of pain in the peripheral joints. However, he continued to have active skin lesions and severe low back pain with morning stiffness and fatigue.\n\nHis follow-up investigations taken at 12 weeks are mentioned below:",
+      "workup": [
+        [
+          "Haemoglobin",
+          "102 g/L",
+          "110-140 g/L",
+          true
+        ],
+        [
+          "Total leucocyte count",
+          "6.8 x 109/L",
+          "5.0-12.0 x 109/L",
+          false
+        ],
+        [
+          "Neutrophil count",
+          "5 x 109/L",
+          "1.5-8.0 x 109/L",
+          false
+        ],
+        [
+          "Lymphocyte count",
+          "4 x 109/L",
+          "1.5-9.5 x 109/L",
+          false
+        ],
+        [
+          "Eosinophil count",
+          "0.3 x 109/L",
+          "1.0 x 109/L",
+          false
+        ],
+        [
+          "Platelets",
+          "450 x 109/L",
+          "150-450 x 109/L",
+          false
+        ],
+        [
+          "Serum creatinine",
+          "35 µmol/L",
+          "2-53 µmol/L",
+          false
+        ],
+        [
+          "Serum uric acid",
+          "210 µmol/L",
+          "120-142 µmol/L",
+          true
+        ],
+        [
+          "Aspartate aminotransferase (AST)",
+          "52 U/L",
+          "8-60 IU/L",
+          false
+        ],
+        [
+          "Alanine aminotransferase (ALT)",
+          "56 U/L",
+          "0-29 IU/L",
+          true
+        ],
+        [
+          "Serum albumin",
+          "38 g/L",
+          "35-50 g/L",
+          false
+        ],
+        [
+          "Erythrocyte sedimentation rate (ESR)",
+          "78 mm/hour",
+          "0-20 mm/hr",
+          true
+        ],
+        [
+          "C-reactive protein (CRP)",
+          "28 mg/L",
+          "Less than 5 mg/L",
+          false
+        ],
+        [
+          "Rheumatoid factor",
+          "Negative",
+          "0-20 U/ML",
+          false
+        ],
+        [
+          "ACPA (Anti citrullinated protein antibody)",
+          "Negative",
+          "0-20 U/ML",
+          false
+        ],
+        [
+          "Peripheral Smear",
+          "Microcytic hypochromic",
+          "",
+          false
+        ],
+        [
+          "X-ray pelvis AP view",
+          "Sclerosis, erosions with widening of right sacroiliac joint",
+          "",
+          false
+        ]
+      ],
+      "question": "What would be the preferred option for further management?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Adalimumab",
+          "pct": 50,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Secukinumab",
+          "pct": 39,
+          "correct": true
+        },
+        {
+          "letter": "C",
+          "text": "Step up the dose of methotrexate",
+          "pct": 9,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Sulfasalazine",
+          "pct": 2,
+          "correct": false
+        },
+        {
+          "letter": "E",
+          "text": "Tofacitinib",
+          "pct": 1,
+          "correct": false
+        }
+      ],
+      "explanation": "This patient has severe skin psoriasis with axial and peripheral joint involvement. The peripheral arthritis improved with apremilast and methotrexate. For patients with predominant axial symptoms with extensive skin involvement, biologics may be considered, provided there is an inadequate response of axial symptoms to NSAIDs. Among the biologics, IL-17 inhibitor may be preferred in comparison to TNF inhibitor considering its greater efficacy for skin involvement. If there is concomitant uveitis or bowel inflammation, TNF inhibitors (except etanercept) are preferred. Methotrexate and intra-articular steroids may not be useful in axial disease, though methotrexate may help for cutaneous psoriasis. The liver enzymes are also mildly raised in this patient, so stepping up methotrexate is difficult. Tofacitinib has been approved for psoriatic arthritis but not for cutaneous psoriasis. Sulfasalazine is not effective for cutaneous psoriasis or axial involvement in psoriatic arthritis. So the best option here will be the IL-17 inhibitor Secukinumab.",
+      "resources": [
+        "Gossec, L., Baraliakos, X., Kerschbaumer, A., de Wit, M., McInnes, I., Dougados, M., Primdahl, J., McGonagle, D.G., Aletaha, D., Balanescu, A. and Balint, P.V., 2020. EULAR recommendations for the management of psoriatic arthritis with pharmacological therapies: 2019 update. Annals of the rheumatic diseases, 79(6), pp.700-712."
+      ]
+    },
+    {
+      "id": "17568",
+      "chapter": 1,
+      "num": 14,
+      "rule": "Demyelination Rule: Stop Anti-TNFs (e.g., Adalimumab) if demyelination occurs; switch to a non-TNF biologic like Sarilumab (IL-6i) or a tsDMARD, as Anti-TNFs are contraindicated.",
+      "vignette": "A 45-year-old woman was referred to you from the neurology clinic for further assessment of her therapy. She was diagnosed with rheumatoid arthritis two years ago and was previously on methotrexate and leflunomide. Despite that, her DAS 28 CRP score was more than 6.0 in two separate assessments and subcutaneous adalimumab was started six months back. Her last DAS 28 CRP score was 3.1 and she was very pleased with the ongoing treatment. Three weeks previously, she developed acute vision loss in her left eye and was diagnosed with retrobulbar optic neuritis by the neurology team. An MRI scan of the brain suggested demyelinating areas in the brain.\n\nHer blood test results are as follows:",
+      "workup": [
+        [
+          "White blood cells",
+          "8.5 x 109/L",
+          "3.6-11 x 109/L",
+          false
+        ],
+        [
+          "Neutrophils",
+          "66%",
+          "50-75%",
+          false
+        ],
+        [
+          "Lymphocytes",
+          "33%",
+          "20-40%",
+          false
+        ],
+        [
+          "Haemoglobin",
+          "125 g/L",
+          "115-165 g/L",
+          false
+        ],
+        [
+          "Mean corpuscular volume (MCV)",
+          "97 fL",
+          "80-95 fL",
+          true
+        ],
+        [
+          "Platelets",
+          "300 x 109/L",
+          "140-400 x 109/L",
+          false
+        ],
+        [
+          "Erythrocyte sedimentation rate (ESR)",
+          "56 mm/hr",
+          "Female 50+: < (5-15) mm/h",
+          true
+        ],
+        [
+          "C-reactive protein (CRP)",
+          "12 mg/L",
+          "< 10 mg/L",
+          true
+        ],
+        [
+          "Creatinine",
+          "90 µmol/L",
+          "60-110 µmol/L",
+          false
+        ],
+        [
+          "Rheumatoid factor (RF)",
+          "120 U/L",
+          "< 20 U/L",
+          true
+        ],
+        [
+          "Anti-CCP antibodies",
+          "200 EU/ml",
+          "< 20 EU/ml",
+          true
+        ]
+      ],
+      "question": "What should you consider for her ongoing therapy?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "No change is required at this time",
+          "pct": 6,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Stop adalimumab and start golimumab",
+          "pct": 5,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Stop adalimumab and start rituximab",
+          "pct": 71,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Stop adalimumab and start sarilumab",
+          "pct": 11,
+          "correct": true
+        },
+        {
+          "letter": "E",
+          "text": "Stop adalimumab and start sulfasalazine",
+          "pct": 8,
+          "correct": false
+        }
+      ],
+      "explanation": "This patient has developed a demyelinating event whilst on adalimumab. Anti-TNF medications are known to cause demyelination and are contraindicated following a demyelinating event. She will require another biologic to control her disease and sarilumab, which is an anti-IL 6 biologic, is the best choice out of the given list. The addition of an oral conventional disease-modifying antirheumatic drug (DMARD) is unlikely to control her disease and rituximab, which is an anti-CD 20 biologic, may have been considered if anti-IL 6 medication or a target synthetic DMARD was not offered as an option.",
+      "resources": [
+        "Raphaèle Seror and others, Pattern of demyelination occurring during anti-TNF-a therapy: a French national survey, Rheumatology, Volume 52, Issue 5, May 2013, Pages 868–874.",
+        "Smolen JS, Landewe RBM et al. EULAR recommendations for the management of rheumatoid arthritis with synthetic and biological disease-modifying antirheumatic drugs: 2022 update, Annals of the Rheumatic Diseases, vol 82, issue 1, 2023"
+      ]
+    },
+    {
+      "id": "7624",
+      "chapter": 1,
+      "num": 15,
+      "rule": "Wrist Ultrasound Rule: Standard dorsal longitudinal views visualize the Radius, Lunate, Capitate, and Metacarpal; the Triquetrum is not included.",
+      "vignette": "Which bone is not typically visualised on the standard view on ultrasound assessment of the dorsal and longitudinal aspects of the wrist over the radiocarpal and mid carpal joints?",
+      "workup": null,
+      "question": "Which bone is not typically visualised on the standard view on ultrasound assessment of the dorsal and longitudinal aspects of the wrist over the radiocarpal and mid carpal joints?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Capitate",
+          "pct": 11,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Lunate",
+          "pct": 19,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Metacarpal",
+          "pct": 18,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Radius",
+          "pct": 3,
+          "correct": false
+        },
+        {
+          "letter": "E",
+          "text": "Triquetrum",
+          "pct": 48,
+          "correct": true
+        }
+      ],
+      "explanation": "The standard view at this level should include the radius, lunate and capitate bones, and the very proximal portion of the metacarpal bone.",
+      "resources": [
+        "European Society of MusculoSkeletal Radiology (no date). Musculoskeletal Ultrasound Technical Guidelines III. Wrist."
+      ]
+    },
+    {
+      "id": "8257",
+      "chapter": 1,
+      "num": 16,
+      "rule": "Dietary Gout Rule: Cherries, low-fat dairy, Vit C, and soy help lower urate; avoid red meat, seafood, and fructose-rich juices.",
+      "vignette": "A 55-year-old man presents to you in clinic with recurrent aspirate-proven gout, namely of the feet, ankles and knees. His serum urate is 600 µmol/L. He also suffers from hypertension and has a BMI of 40 kg/m2. You provide lifestyle advice and initiate allopurinol with colchicine. He asks you about specific dietary measures which can help reduce his urate levels.",
+      "workup": null,
+      "question": "Which of the following food and drink products may help reduce serum urate levels?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Apple juice",
+          "pct": 13,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Beef",
+          "pct": 2,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Cherries",
+          "pct": 59,
+          "correct": true
+        },
+        {
+          "letter": "D",
+          "text": "Mackerel",
+          "pct": 9,
+          "correct": false
+        },
+        {
+          "letter": "E",
+          "text": "Spinach",
+          "pct": 18,
+          "correct": false
+        }
+      ],
+      "explanation": "Apart from medication, addressing lifestyle factors such as diet, alcohol intake, weight control and exercise are all important in the management of chronic gout. Various food and drink products may either increase or decrease serum urate levels.\n\nEncouraging patients to have a low-purine diet is imperative. Thus they should avoid or minimise consumption of seafood and red meat. Alcohol, fructose-rich fruit juices and soda should similarly be avoided as they also stimulate uric acid production. On the contrary, purine-rich vegetables such as spinach, lentils and peas show mixed results in studies (i.e. stimulating hyperuricaemia, having no effect or stimulating hypouricaemia) – overall they should be encouraged as a substitute to meat products given their overall benefit towards weight loss, and the cardiovascular and gastrointestinal systems.\n\nThe BSR specifically recommends cherries as they appear to have uricosuric properties and thus help reduce serum urate. Other vitamin C-rich products, soybeans, low-fat yoghurt and semi-skimmed milk may also help.",
+      "resources": [
+        "Hui, M., Carr, A., Cameron, S., et al. (2017). The British Society for Rheumatology guideline for the management of gout. Rheumatology, 56(7), pp. e1–e20.",
+        "Li R., Yu K.., Li C. (2018). Dietary factors and risk of gout and hyperuricemia: a meta-analysis and systematic review. Asia Pac J Clin Nutr, 27(6), 1344-56."
+      ]
+    },
+    {
+      "id": "8251",
+      "chapter": 1,
+      "num": 17,
+      "rule": "Stickler Syndrome: Early OA + myopia, cleft palate, and hearing loss = Stickler Syndrome; ANA/RF/ACPA are negative.",
+      "vignette": "A 26-year-old woman is referred by her GP for knee and hand pain. Radiographs showed features consistent with severe osteoarthritis. She has a medical history of myopia and cleft palate. On examination, she was noted to wear hearing aids. She had scoliosis and was hypermobile. She had crepitus on examination of her joints, but no obvious effusion. ANA, RF and ACPA were negative. Full blood count, renal function and liver function were unremarkable. CRP was within a normal range.",
+      "workup": null,
+      "question": "What is the diagnosis?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Classical Ehlers–Danlos syndrome",
+          "pct": 36,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Hypermobility",
+          "pct": 3,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Juvenile idiopathic arthritis",
+          "pct": 0,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Sero-negative arthritis",
+          "pct": 0,
+          "correct": false
+        },
+        {
+          "letter": "E",
+          "text": "Stickler syndrome",
+          "pct": 61,
+          "correct": true
+        }
+      ],
+      "explanation": "This patient presents with early-onset osteoarthritis. Although secondary causes of this include inflammatory arthritis, a combination of myopia, cleft palate, hearing loss and scoliosis, the absence of any immunological markers makes Stickler syndrome the most likely diagnosis. She is hypermobile, but there is nothing in the history or examination to suggest classical Ehlers–Danlos syndrome.",
+      "resources": [
+        "Rishi, P., Maheshwari, A. and Rishi, E. (2015). Stickler syndrome. Indian Journal of Ophthalmology, 63(7), pp. 614–615."
+      ]
+    },
+    {
+      "id": "19566",
+      "chapter": 1,
+      "num": 18,
+      "rule": "Psoriatic Arthritis: fluffy periostitis and ankylosis (esp. axial/mutilans); erosions co-exist with new bone formation.",
+      "vignette": "A 58-year-old man presents with bilateral hand joint pain. An X-ray of the hands shows juxta-articular erosions and joint space narrowing.",
+      "workup": null,
+      "question": "Which of the following additional radiological signs would most support the diagnosis of psoriatic arthritis?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Ankylosis and fluffy periostitis",
+          "pct": 39,
+          "correct": true
+        },
+        {
+          "letter": "B",
+          "text": "Central erosions in DIP joints",
+          "pct": 39,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Marginal erosions without new bone formation",
+          "pct": 17,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Periarticular osteopenia",
+          "pct": 4,
+          "correct": false
+        },
+        {
+          "letter": "E",
+          "text": "Symmetrical joint space narrowing at metacarpophalangeal joints (MCPs)",
+          "pct": 1,
+          "correct": false
+        }
+      ],
+      "explanation": "Fluffy periostitis and ankylosis are highly characteristic of psoriatic arthritis, especially in axial or mutilans forms. Erosive changes typically co-exist with new bone formation. Marginal erosions, symmetrical joint space narrowing and periarticular osteopenia are more typical of rheumatoid arthritis. Central erosions in the distal interphalangeal (DIP) joints are a key feature of erosive osteoarthritis.",
+      "resources": [
+        "Estrada Alarcón, P.V., Moya Alvarado, P. and Sirvent Alierta, E.L. (2024). Ultrasound for the diagnosis of giant cell arteritis, European Journal of Rheumatology. Available at: https://pmc.ncbi.nlm.nih.gov/articles/PMC11459609/ (Accessed: 18 August 2025)."
+      ]
+    },
+    {
+      "id": "573",
+      "chapter": 1,
+      "num": 19,
+      "rule": "Stable RA: Bywater’s lesions (nail-fold infarcts) in stable RA don't indicate systemic vasculitis; no treatment change needed if joints are quiet.",
+      "vignette": "A 73-year-old man with long-standing seropositive rheumatoid arthritis is reviewed in the clinic and you notice he has 3 nail-fold infarcts. He tells you he has had these on and off for some time, he feels well in himself. His current medications are Methotrexate 15mg per week, prednisolone 5 mg per day, calcium and vitamin D supplements and alendronate 70mg/week. Urine dipstick is normal and his examination including neurological and cardiovascular systems is normal except for chronic rheumatoid changes of his hands and the infarcts. He has no tender joints and no active synovitis.\n\nFurther investigations reveal:",
+      "workup": [
+        [
+          "Haemoglobin",
+          "12.8 g/dl",
+          "(13.5-17.7)",
+          true
+        ],
+        [
+          "Creatinine",
+          "70 umol/L",
+          "(50-100)",
+          false
+        ],
+        [
+          "ESR",
+          "34 mm/hr",
+          "(0-10)",
+          true
+        ],
+        [
+          "CRP",
+          "7 mg/dl",
+          "(<5)",
+          true
+        ],
+        [
+          "LFTs",
+          "Normal",
+          "",
+          false
+        ]
+      ],
+      "question": "Given this information what treatment changes would you recommend?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Arrange for patient to have pulsed cyclophosphamide.",
+          "pct": 6,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Increase prednisolone to 40 mg, stop Methotrexate and commence Azathioprine",
+          "pct": 2,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Increase prednisolone to 40 mg and titrate methotrexate to 25 mg per week",
+          "pct": 14,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Increase prednisolone to 40mg",
+          "pct": 4,
+          "correct": false
+        },
+        {
+          "letter": "E",
+          "text": "Remain on the same medication and review",
+          "pct": 74,
+          "correct": true
+        }
+      ],
+      "explanation": "This man has Bywater's lesions; cutaneous infarcts that occur around the nail bed in patients with seropositive rheumatoid arthritis. In the absence of other features of rheumatoid vasculitis or other cause in a patient with stable disease, they are not a reason to escalate immunosuppressive therapy and do not correlate with systemic vasculitis in other organs.",
+      "resources": [
+        "Watts RA, Carruthers DM, Scott DG. Isolated nail fold vasculitis in rheumatoid arthritis. Ann Rheum Dis. 1995 Nov;54(11):927-9."
+      ]
+    },
+    {
+      "id": "8444",
+      "chapter": 1,
+      "num": 20,
+      "rule": "Gout & Hypertension: Switch ramipril to losartan; it has a uricosuric effect that reduces serum urate and gout incidence.",
+      "vignette": "A 76-year-old man presents to his GP with attacks of gout. He reports that his symptoms have significantly improved since he has been on allopurinol 300 mg, and refuses any further increase in this medication. He has a past medical history of hypertension and hypercholesterolaemia. His medications include ramipril 10 mg OD, atorvastatin 40 mg OD and allopurinol 300 mg OD.",
+      "workup": null,
+      "question": "What would be the most suitable next step in the management of this patient?",
+      "choices": [
+        {
+          "letter": "A",
+          "text": "Increase atorvastatin to 80 mg",
+          "pct": 4,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Stop ramipril",
+          "pct": 2,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Switch atorvastatin to rosuvastatin",
+          "pct": 12,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Switch ramipril to irbesartan",
+          "pct": 4,
+          "correct": false
+        },
+        {
+          "letter": "E",
+          "text": "Switch ramipril to losartan",
+          "pct": 79,
+          "correct": true
+        }
+      ],
+      "explanation": "Of the above options, option E is correct. Losartan has been shown to reduce the incidence of gout and have a uricosuric effect when used in combination with allopurinol. Therefore, substituting ramipril for losartan would be appropriate.",
+      "resources": [
+        "Hui, M., Carr, A., Cameron, S., Davenport, G., Doherty, M., Forrester, H., Jenkins, W., Jordan, K.M., Mallen, C.D., McDonald, T.M. and Nuki, G. (2017). The British Society for Rheumatology guideline for the management of gout. Rheumatology, 56(7), pp. E1–e20."
+      ]
+    }
+  ],
+  "qr_rules": [
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Diverticular Disease Rule: IL-6i (e.g., TCZ) & JAKi risk diverticulitis/perforation. Use alternative…",
+      "text": "All of the above biologic therapies are licensed for use in rheumatoid arthritis. Selection of a biologic therapy should always involve discussion with the patient and should take into account the patient’s comorbidities and other medication.",
+      "tags": [
+        "Biologics",
+        "RA",
+        "AxSpA",
+        "JAKi"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "CKD & DMARDs: Leflunomide is ideal for CKD IV (no dose adjustment). Avoid MTX if .",
+      "text": "This patient has active rheumatoid arthritis (RA) with co-existing chronic kidney disease (CKD) [(stage 4 - creatinine clearance (15-30 ml/min)]. Among the available options, leflunomide is the ideal drug with nil renal excretion.",
+      "tags": [
+        "Methotrexate",
+        "Renal",
+        "RA",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "US in RA Rule: RA shows hypoechoic synovitis with PDUS hyperaemia and marginal erosions (classically…",
+      "text": "The most likely diagnosis is rheumatoid arthritis. The question tests the interpretation of ultrasound findings in such patients and highlights the importance of a bedside ultrasound scan in detecting inflammation, which is critical for starting therapy.",
+      "tags": [
+        "RA",
+        "AxSpA",
+        "Imaging"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "IBD & Biologics Rule: IL-17i (e.g., Secukinumab) is contraindicated in active Crohn’s;",
+      "text": "This patient has active psoriatic arthritis and a biologic is indicated. There is also evidence of active Crohn's disease.",
+      "tags": [
+        "Biologics",
+        "PsA",
+        "JAKi"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Start anti-TNF if ≥3 swollen and ≥3 tender joints (dactylitis = 1) after failing ≥2 DMARDs. Record b…",
+      "text": "This gentleman meets BSR criteria for anti-TNF therapy with greater than three swollen joints and greater than three tender joints. Dactylitis counts as one joint.",
+      "tags": [
+        "Biologics",
+        "AxSpA",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "GPA Induction Rule: Use IV pulsed CYC + oral steroids for severe/sight-threatening GPA. Diagnosis re…",
+      "text": "This patient has Wegener’s (granulomatosis with polyangiitis) as suggested by the arthritis, nasal involvement and pseudotumour of the left orbit. According to the American College of Rheumatology, criteria for the diagnosis of GPA include (1) nasal or oral inflammation, (2) respiratory radiographic abnormalities consistent with respiratory tissue ",
+      "tags": [
+        "Vasculitis",
+        "AxSpA",
+        "Steroids"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Early RA Rule: Start MTX monotherapy + bridging steroids (even if severe/erosive). Biologics require…",
+      "text": "The guidance has recently changed where combination therapy was considered the best approach for moderate-to-severe onset RA (ie. seropositive, erosive at presentation, high inflammatory markers at presentation)and now monotherapy, especially with Methotrexate as first-line, is advocated.",
+      "tags": [
+        "Methotrexate",
+        "Biologics",
+        "AxSpA",
+        "Steroids",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Seronegative RA Rule: High urate is a \"red herring.\" Symmetric polyarthritis + US synovitis (without…",
+      "text": "This patient presents with clinical features of symmetrical polyarthropathy in a rheumatoid distribution. Although he drinks alcohol and has a high urate level, there is no suggestion in the history that he has inter critical arthritis typical of this.",
+      "tags": [
+        "Gout",
+        "Imaging"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Gout Microscopy Rule: Urate: Needle-shaped & negatively birefringent (Yellow = Parallel/East-West; B…",
+      "text": "The microscopy shows needle-shaped crystals, which are typical of gout. Urate crystals have a negative birefringence to polarised light, and this depends on the direction the crystals are facing (note that the north-south crystals are blue; east-west crystals are yellow).",
+      "tags": [
+        "Gout",
+        "CPPD"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Pregnancy DMARD Rule: Switch MTX to Sulfasalazine (safe + 5mg folic acid) at least 4 weeks pre-conce…",
+      "text": "Planning pregnancy for patients on DMARDs can be tricky. The disease remission should be maintained and the patient must be on medications that are proven safe for the foetus.",
+      "tags": [
+        "Methotrexate",
+        "Pregnancy",
+        "AxSpA",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Leflunomide Pregnancy Rule: Perform washout with Cholestyramine 8g TDS for 11 days; confirm levels a…",
+      "text": "According to the summary of product characteristics, following the washout procedures, verification by 2 separate tests at an interval of at least 14 days and a waiting period of one-and-a-half months between the first occurrence of a plasma concentration below 0.02 mg/L and fertilisation is required.",
+      "tags": [
+        "Pregnancy"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Rheumatoid Vasculitis Rule: Chronic, \"burnt-out\" RA (wrist ankylosis, MCP erosions, DIP sparing) plu…",
+      "text": "(Distal interphalangeal -DIP, Proximal interphalangeal -PIP, Metacarpophalangeal – MCP, CMC- carpometacarpal)",
+      "tags": [
+        "Gout",
+        "RA",
+        "PsA",
+        "SLE",
+        "Vasculitis",
+        "AxSpA",
+        "Imaging"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "PsA Management Rule: For axial PsA with extensive skin disease, Secukinumab (IL-17i) is preferred ov…",
+      "text": "This patient has severe skin psoriasis with axial and peripheral joint involvement. The peripheral arthritis improved with apremilast and methotrexate.",
+      "tags": [
+        "Methotrexate",
+        "Biologics",
+        "PsA",
+        "AxSpA",
+        "Steroids",
+        "JAKi"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Hyperuricaemia Management Rule: Stop thiazide/loop diuretics before pushing Allopurinol past renal l…",
+      "text": "This man is already taking the maximum dose of allopurinol for his renal function. Below is the guidance from the Renal Handbook on recommended doses of allopurinol in renal impairment.",
+      "tags": [
+        "Gout",
+        "Renal",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Demyelination Rule: Stop Anti-TNFs (e.g., Adalimumab) if demyelination occurs; switch to a non-TNF b…",
+      "text": "This patient has developed a demyelinating event whilst on adalimumab. Anti-TNF medications are known to cause demyelination and are contraindicated following a demyelinating event.",
+      "tags": [
+        "Biologics",
+        "AxSpA",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Wrist Ultrasound Rule: Standard dorsal longitudinal views visualize the Radius, Lunate, Capitate, an…",
+      "text": "The standard view at this level should include the radius, lunate and capitate bones, and the very proximal portion of the metacarpal bone.",
+      "tags": [
+        "Imaging"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Dietary Gout Rule: Cherries, low-fat dairy, Vit C, and soy help lower urate; avoid red meat, seafood…",
+      "text": "Apart from medication, addressing lifestyle factors such as diet, alcohol intake, weight control and exercise are all important in the management of chronic gout. Various food and drink products may either increase or decrease serum urate levels.",
+      "tags": [
+        "Gout",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Stickler Syndrome: Early OA + myopia, cleft palate, and hearing loss = Stickler Syndrome; ANA/RF/ACP…",
+      "text": "This patient presents with early-onset osteoarthritis. Although secondary causes of this include inflammatory arthritis, a combination of myopia, cleft palate, hearing loss and scoliosis, the absence of any immunological markers makes Stickler syndrome the most likely diagnosis.",
+      "tags": [
+        "General"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Psoriatic Arthritis: fluffy periostitis and ankylosis (esp. axial/mutilans); erosions co-exist with …",
+      "text": "Fluffy periostitis and ankylosis are highly characteristic of psoriatic arthritis, especially in axial or mutilans forms. Erosive changes typically co-exist with new bone formation.",
+      "tags": [
+        "RA",
+        "PsA",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Stable RA: Bywater’s lesions (nail-fold infarcts) in stable RA don't indicate systemic vasculitis; n…",
+      "text": "This man has Bywater's lesions; cutaneous infarcts that occur around the nail bed in patients with seropositive rheumatoid arthritis. In the absence of other features of rheumatoid vasculitis or other cause in a patient with stable disease, they are not a reason to escalate immunosuppressive therapy and do not correlate with systemic vasculitis in ",
+      "tags": [
+        "RA",
+        "Vasculitis"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Gout & Hypertension: Switch ramipril to losartan; it has a uricosuric effect that reduces serum urat…",
+      "text": "Of the above options, option E is correct. Losartan has been shown to reduce the incidence of gout and have a uricosuric effect when used in combination with allopurinol.",
+      "tags": [
+        "Gout"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Gout Urate Target: Initially target < 300 umol/L to dissolve tophi and crystals. Once tophi resolve …",
+      "text": "The initial serum urate target level to be maintained is below 300 µmol/L. This is to prevent the new deposition of crystals and for the dissolution of existing crystals and tophi.",
+      "tags": [
+        "Gout"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Chronic tophaceous gout can present as polyarthritis without acute attacks if masked by steroids, sh…",
+      "text": "Although this patient has never experienced acute gouty attacks, sometimes they may directly present as chronic gout, with tophi. In this case, the patient’s acute attacks may have been masked by her frequent steroid use.",
+      "tags": [
+        "Gout",
+        "AxSpA",
+        "Imaging",
+        "Steroids"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Polymyalgia Rheumatica (PMR) presents as proximal pain and stiffness (shoulder/pelvic girdle) with p…",
+      "text": "Patients who present with proximal muscle pain and stiffness need detailed evaluation to exclude serious muscle disease. In the elderly, polymyalgia rheumatica (PMR), and inflammatory myositis need to be considered.",
+      "tags": [
+        "RA",
+        "AxSpA",
+        "Imaging",
+        "Steroids"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "In active PsA with high skin burden (PASI > 10) failing conventional DMARDs, IL-17 inhibitors like s…",
+      "text": "This patient has active psoriatic arthritis with active skin involvement despite being on two conventional DMARDs. According to the 2023 EULAR recommendations algorithm for the management of PsA, she needs consideration of a biologic DMARD (Phase III of the algorithm).",
+      "tags": [
+        "Biologics",
+        "PsA",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Gout in CKD: Start allopurinol at 50 mg/day if CKD is present; ULT is indicated during a first flare…",
+      "text": "The correct answer here is to start allopurinol at a reduced dosage (50 mg/day). Usually, allopurinol is initiated at a dose of 100 mg/day and here it is reduced further as the patient has evidence of chronic kidney disease (CKD).",
+      "tags": [
+        "Gout",
+        "Renal",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Still's disease complicated by MAS presents with high fever, cytopenias, extremely high ferritin, an…",
+      "text": "This patient has a history of recurrent seronegative arthritis with an evanescent erythematous rash. He presented this time with fever, systemic illness, liver failure, falling ESR, significantly elevated ferritin, elevated triglycerides, low fibrinogen and bi-cytopenia with significant thrombocytopenia.",
+      "tags": [
+        "Methotrexate",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Ankylosing Spondylitis and Infliximab: Continue therapy for stable disease; NICE TA383 allows patien…",
+      "text": "NICE does not recommend starting infliximab (unless it is a biosimilar and the least expensive) in ankylosing spondylitis but does specify that those patients currently receiving infliximab for ankylosing spondylitis should continue as appropriate if their clinician feels appropriate. Given that this man has had a history of severe disease in the p",
+      "tags": [
+        "Methotrexate",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "The double contour sign shows urate crystals on the cartilage surface, unlike pseudogout where depos…",
+      "text": "This patient is most likely suffering from an acute attack of gout. Although both attacks of gout and pseudogout are likely, this question highlights the importance of interpreting ultrasound images in such a clinical context.",
+      "tags": [
+        "Gout",
+        "AxSpA",
+        "Imaging",
+        "CPPD"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Factual Error: the Extensor Digitorum Longus is a muscle located in the leg, while the wrist contain…",
+      "text": "The extensor digitorum longus tendon originates from the extensor digitorum longus muscle and divides into 4 parts as it passes over the wrist.",
+      "tags": [
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Among the DMARDs, leflunomide has the maximum risk for weight loss.",
+      "text": "Weight loss is one of the under-recognised adverse effects of leflunomide. Among the DMARDs, leflunomide has the maximum risk for weight loss.",
+      "tags": [
+        "RA",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "AOSD: pericapitate ankylosis, ↑ferritin, and low glycosylated ferritin (<20%); vs haemochromatosis: …",
+      "text": "X-rays of the hands show pericapitate ankylosis, which is highly suggestive of Adult-Onset Still’s Disease (AOSD). Hyperferritinaemia is observed in approximately 70% of AOSD patients, and serum ferritin can become normal after successful treatment of the disease.",
+      "tags": [
+        "RA",
+        "Imaging"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Pre-allopurinol screen: HLA-B5801 in Thai/Han Chinese/Korean (risk: SCAR/SJS/TEN) vs HLA-B1502 (carb…",
+      "text": "HLA B*5801 screening should be done in this patient before commencing treatment with allopurinol. Allopurinol should not be used in people carrying the variant allele HLA- B*5801, as the risk of a severe cutaneous adverse reaction during treatment with allopurinol is greatly increased.",
+      "tags": [
+        "Gout",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "AxSpA: No bone marrow oedema on MRI + normal CRP = \"burnt-out\" disease (mechanical pain from ankylos…",
+      "text": "This patient has had high disease activity for a prolonged period and has undergone therapy with anti-TNFa only for a small duration. Hence, he has developed extensive true ankylosis of the joints.",
+      "tags": [
+        "Biologics",
+        "AxSpA",
+        "Imaging"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "MAS (vs AOSD flare): continuous fever, irritability, pancytopenia, ↑ALT/AST, ↑↑ferritin, and paradox…",
+      "text": "The initial diagnosis of adult-onset Still’s disease (AOSD) was made based on the findings of prolonged quotidian fever, evanescent rash during the episodes of fever, arthritis, hepatosplenomegaly, hyperferritinemia, and pleural effusion with leukocytosis and thrombocytosis. On his second admission, the patient has features typical of macrophage ac",
+      "tags": [
+        "Methotrexate"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Post-partum RA flare occurs in 36% by 1mo, 85% by 3mo, and 98% by 4mo; breastfeeding on TNFi is perm…",
+      "text": "In an evaluation of 69 RA patients, postpartum recurrence of disease was found in 36% within the first month, 85% by 3 months and 98% by the end of 4 months.",
+      "tags": [
+        "Biologics",
+        "Pregnancy",
+        "AxSpA",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "ACPA/CCP > RF for predicting persistent vs self-limiting arthritis (higher sens/spec + prognostic va…",
+      "text": "Anti-citrullinated peptide antigen antibodies are a strong prognostic indicator of disease persistence and have higher sensitivities and specificities than rheumatoid factors.",
+      "tags": [
+        "General"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Pseudogout (pseudo-RA pattern) in elderly w/ large joint swelling + PIP/DIP nodules + ⊖RF/normal ura…",
+      "text": "It is most likely that this patient has pseudogout presenting with a pseudo rheumatoid pattern of chronic, recurrent swelling affecting primarily large joints. It is often associated with inflammatory symptoms such as stiffness, pyrexia, and malaise.",
+      "tags": [
+        "Gout",
+        "Renal",
+        "AxSpA",
+        "Steroids",
+        "CPPD"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Early AxSpA: STIR/T2 MRI ⊕ subchondral BMO = active inflammation (precedes fatty metaplasia/erosions…",
+      "text": "In early spondyloarthritis, an MRI scan can detect bone marrow oedema in subchondral regions on STIR or T2 fat-suppressed sequences, representing active inflammation. These lesions precede erosions, sclerosis, and ankylosis.",
+      "tags": [
+        "AxSpA",
+        "Imaging"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "CASPAR (≥3pts) includes psoriasis (current/Hx/family), dactylitis, juxta-articular new bone, ⊖RF, an…",
+      "text": "SSZ is the preferred csDMARD for conception/pregnancy in RA, whereas MTX, leflunomide, and MMF are contraindicated. ²",
+      "tags": [
+        "Methotrexate",
+        "Pregnancy",
+        "PsA",
+        "AxSpA",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "SSZ is the preferred csDMARD for conception/pregnancy in RA, whereas MTX, leflunomide, and MMF are c…",
+      "text": "As per the BSR and BHPR guidelines on prescribing drugs in pregnancy and breastfeeding—Part I: standard and biologic disease-modifying anti-rheumatic drugs and corticosteroids, sulfasalazine is safe during pregnancy.",
+      "tags": [
+        "Methotrexate",
+        "Biologics",
+        "Pregnancy",
+        "AxSpA",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Nerve-specific pain (ulnar distribution) post-ORIF suggests mechanical impingement rather than CRPS;…",
+      "text": "This woman’s symptoms suggest ulnar nerve impingement, which may be due to a loosening screw or migration of a metal plate. The 2011 RCP Guidelines for Complex Regional Pain Syndrome state that reversible causes must be excluded in atypical cases labelled as CRPS.",
+      "tags": [
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Haemochromatosis is likely given 2nd/3rd MCP involvement, hook-like osteophytes (\"bird’s beak\"), cho…",
+      "text": "This is an atypical presentation of haemochromatosis. The suggestive features are second and third MCP joint involvement on X-ray findings and elevated serum ferritin levels.",
+      "tags": [
+        "PsA",
+        "Imaging"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Add etanercept (bDMARD) since high CV risk (smoker, HTN, age) contraindicates JAKi in active, erosiv…",
+      "text": "This patient has active rheumatoid arthritis despite being on methotrexate 25 mg/week and hydroxychloroquine 300 mg/day, and he is unable to stop oral steroids. He needs another drug to be added to control his disease activity.",
+      "tags": [
+        "Methotrexate",
+        "Biologics",
+        "RA",
+        "Steroids",
+        "DMARDs",
+        "JAKi"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "MTX is first-line for RA; bDMARDs are not licensed as initial therapy despite poor prognostic marker…",
+      "text": "This patient has several poor prognostic indicators for the outcome of her RA in that she is strongly seropositive, has a positive family history and at presentation has high inflammatory markers with radiographic erosions and early involvement of a large joint. This patient is highly likely to require treatment with a biological therapy they are n",
+      "tags": [
+        "Methotrexate",
+        "Biologics",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Calcium apatite (HA) causes calcific tendinitis, while CPPD (chondrocalcinosis), Ca oxalate (ESRD/ox…",
+      "text": "This patient has developed calcific tendinitis of the right shoulder. Calcific tendonitis of the shoulder is part of the spectrum of hydroxyapatite deposition disease (calcium apatite deposition disease).",
+      "tags": [
+        "Renal",
+        "Steroids",
+        "CPPD"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "NICE criteria for anti-TNF in axial SpA: BASDAI ≥4 and spinal VAS ≥4 after failing two NSAIDs.",
+      "text": "He has active axial spondyloarthropathy and has tried two non-steroidal anti-inflammatory drugs. As per the NICE guidelines, (BASDAI) score of 4 and a spinal pain visual analogue scale (VAS) of 4 cm will qualify him for a biologic.",
+      "tags": [
+        "Biologics",
+        "AxSpA",
+        "Steroids"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "In unintended pregnancy: stop MTX, start FA 5mg/day, refer to fetal medicine. Folinic acid washout i…",
+      "text": "Methotrexate needs to be stopped immediately, folic acid supplementation (5 mg/day) continued, and a careful evaluation of foetal risk with early referral to a foetal medicine department should be considered as a first step for her management at this stage. According to the British Society for Rheumatology guideline on prescribing drugs in pregnanc",
+      "tags": [
+        "Methotrexate",
+        "Pregnancy",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Trying to conceive: stop MTX and start certolizumab (no placental transfer); SSZ is safe.",
+      "text": "This patient has got severe active disease. Improving her disease activity will improve her chances of successfully conceiving.",
+      "tags": [
+        "Methotrexate",
+        "Pregnancy"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "For active PsA (≥3 SJC/TJC) failing 1 csDMARD: start oral upadacitinib (JAKi). Adalimumab, guselkuma…",
+      "text": "This patient should be started on upadacitinib. According to the 2022 British Society for Rheumatology guideline for treating psoriatic arthritis with biologic and targeted synthetic DMARDs, active psoriatic arthritis is defined as at least three tender and three swollen joints.",
+      "tags": [
+        "Biologics",
+        "PsA",
+        "AxSpA",
+        "DMARDs",
+        "JAKi"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Acute gout with NSAID allergy: start colchicine. High uric acid (0.52) favors gout over PsA; do not …",
+      "text": "Allopurinol cannot be initiated yet as the gout is active. Colchicine can be given now and prophylaxis should be continued as per BSR guidelines for up to 6 months from when he starts allopurinol in a few weeks.",
+      "tags": [
+        "Gout",
+        "PsA",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "In HLA-B*5801 (Han Chinese): start febuxostat. Allopurinol contraindicated high risk of severe cutan…",
+      "text": "This patient should be started on febuxostat. The British Society for Rheumatology (BSR) guidelines for the management of gout recommend that febuxostat can be used as an alternative second-line xanthine oxidase inhibitor for patients in whom allopurinol is not tolerated or whose renal impairment prevents allopurinol dose escalation sufficient to a",
+      "tags": [
+        "Gout",
+        "Renal",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Crowned dens syndrome (CPPD): acute neck pain, fever, high ESR/CRP. CT shows calcified transverse li…",
+      "text": "Crowned dens syndrome is a rare form of acute pseudogout (calcium pyrophosphate deposition disease) characterised by the formation of calcium pyrophosphate crystals affecting the ligaments of the dens. It classically presents with acute neck pain, fever and raised inflammatory markers.",
+      "tags": [
+        "AxSpA",
+        "CPPD"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Acute CPPD monoarthritis (knee): IA steroid injection. Colchicine not 1st-line, used for prophylaxis…",
+      "text": "Although the serum uric acid is elevated, the key diagnostic finding is the presence of rhomboid, positively birefringent crystals, which are characteristic of pseudogout (calcium pyrophosphate deposition disease, CPPD).",
+      "tags": [
+        "Methotrexate",
+        "Gout",
+        "PsA",
+        "Steroids",
+        "CPPD"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Gout prophylaxis (≥2 attacks) with CKD stage 3 (eGFR 55): start low-dose allopurinol (100 mg daily) …",
+      "text": "This patient has had a second attack of gout and should receive urate-lowering therapy. The most appropriate option in the context of stage 3 CKD would be the initiation of low-dose allopurinol and titration of dose according to serum urate concentration.",
+      "tags": [
+        "Gout",
+        "Renal"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "CD with type 2 peripheral arthritis (poly) + bowel flare: start MTX (treats both). SSZ helpful in UC…",
+      "text": "This patient has Crohn’s disease (CD) with peripheral arthritis and uveitis. She has mild bowel symptoms with no axial inflammation.",
+      "tags": [
+        "Methotrexate",
+        "AxSpA",
+        "Steroids"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "ULT in CCF/CKD3 (eGFR 35): start allopurinol 50 mg daily + 3–6 months colchicine 500 mcg daily proph…",
+      "text": "While this patient has marked chronic kidney disease, urate-lowering therapy is not contraindicated. Lifestyle changes are important, but will not work alone.",
+      "tags": [
+        "Gout",
+        "Renal",
+        "AxSpA",
+        "Steroids"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Stroke secondary to IVIg: sudden right hemiplegia and dysphasia during infusion. IVIg increases bloo…",
+      "text": "Acute thrombotic events have been reported in around 2% of patients undergoing IV Ig therapy. Although antiphospholipid syndrome may be a possibility despite her previous negative APS screen, the onset of symptoms during IVIg infusion makes stroke secondary to IVIg the most likely diagnosis.",
+      "tags": [
+        "General"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Conceives (DAS 28 6.1): start SSZ.",
+      "text": "This patient needs a conventional standard DMARD first and sulphasalazine is the most appropriate option as the others are contraindicated in pregnancy.",
+      "tags": [
+        "Pregnancy",
+        "AxSpA",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "FMF (MEFV homozygous): regular colchicine 1mg/day. Prevents flares and AA amyloidosis. NSAIDs/steroi…",
+      "text": "Diagnosis is familial Mediterranean fever. Naproxen, prednisolone and paracetamol can be used for flares for symptom control, but only regular colchicine can reduce the incidence of flares and longer-term risk of renal amyloidosis.",
+      "tags": [
+        "Gout",
+        "Renal",
+        "Steroids"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "RS3PE (elderly, pitting edema, RF/CCP -ve): CXR first (paraneoplastic/smoking risk); Rx low-dose ste…",
+      "text": "This man most likely has remitting seronegative symmetrical synovitis with pitting oedema (RS3PE). RS3PE is a distinct entity rather than a subset of rheumatoid arthritis.",
+      "tags": [
+        "RA",
+        "AxSpA",
+        "Imaging",
+        "Steroids"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "RA peri-op: Continue MTX at current dose throughout per BSR/BHPR guidelines for conventional DMARDs",
+      "text": "This patient should be advised to continue with her current medications in the perioperative period. As per the British Society for Rheumatology (BSR) and British Health Professionals in Rheumatology (BHPR) guidelines for the prescription and monitoring of non-biologic disease-modifying anti-rheumatic drugs (DMARD), during the perioperative period,",
+      "tags": [
+        "Methotrexate",
+        "Biologics",
+        "AxSpA",
+        "DMARDs",
+        "Perioperative"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Active RA (DAS28 >3.2) on low-dose oral MTX with GI intolerance: switch to SC MTX. (current biologic…",
+      "text": "This patient has active rheumatoid arthritis as evidenced by the DAS28 scores and recurrent courses of corticosteroids. She has not fully completed the 3 months of the biologic to ascertain whether it is efficacious and whether a switch of biologic is required.",
+      "tags": [
+        "Methotrexate",
+        "Biologics",
+        "RA",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "MRI sacroiliitis (ASAS-SPARTAN): minimum 4 sequences—3 semi-coronal + 1 semi-axial. T1-weighted for …",
+      "text": "A minimum of 4 sequence IAPs (image acquisition protocols) is recommended for imaging sacroiliitis, per the consensus of the ASA-SPARTAN collaboration. The 4 sequences are 3 semi-coronal and 1 semi-axial for the ascertainment of sacroiliitis.",
+      "tags": [
+        "AxSpA",
+        "Imaging"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "AxSpA+PsO+UC+old TB: JAK-i (upadacitinib/tofacitinib) covers all 3 conditions with lower TB reactiva…",
+      "text": "IL-23 inhibitors are effective in psoriasis and psoriatic arthritis but have failed in clinical trials for axial spondyloarthritis. IL-17 inhibitors work well for axial spondyloarthritis and psoriasis, but their use in inflammatory bowel disease is limited, as they can worsen ulcerative colitis or Crohn’s disease.",
+      "tags": [
+        "PsA",
+        "AxSpA",
+        "JAKi",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "RA-ILD (UIP pattern: honeycombing/traction bronchiectasis): add anti-fibrotics (pirfenidone) as per …",
+      "text": "This patient is likely to have rheumatoid arthritis associated with Interstitial Lung Disease with a high-resolution CT scan (ILD with HRCT) suggestive of UIP (Usual interstitial pneumonia) pattern. The current EULAR/ERS guidelines recommends pirfenidone in patients with RA-ILD with a UIP pattern.",
+      "tags": [
+        "Methotrexate",
+        "Biologics",
+        "RA",
+        "AxSpA",
+        "SSc"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "PsA (well-controlled on NSAIDs, no erosions): continue naproxen + PPI as BSR guidelines advise no es…",
+      "text": "Her joint symptoms are very well controlled on Naproxen, and BSR guidelines would advise continuing with her current management. There is no indication to escalate to a disease-modifying agent or anti-TNF agent at present.",
+      "tags": [
+        "Biologics",
+        "PsA",
+        "AxSpA",
+        "Steroids"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "AS with SOB/orthopnea: TTE for aortic regurgitation, as ECG/tapes are for blocks (more common)",
+      "text": "It has been estimated that cardiac manifestations in patients with AS are found in 2-10% of patients. The most common cardiac manifestation of AS is heart block (3-33%), however, this patient describes symptoms more in keeping with aortic regurgitation (6-10%), therefore a transthoracic echo would be the most relevant baseline investigation.",
+      "tags": [
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Pregnancy planning in RA: stop MTX ≥4 weeks (1 month) before conception and switch to pregnancy-safe…",
+      "text": "Methotrexate is contraindicated in pregnancy and breastfeeding. The BSR now advises that methotrexate should be stopped for 1 month (i.e.",
+      "tags": [
+        "Methotrexate",
+        "Pregnancy",
+        "AxSpA",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "HBcAb+ starting Rituximab: start antiviral prophylaxis before/with treatment and continue for 12 mon…",
+      "text": "All patients with autoimmune rheumatic diseases should be screened for hepatitis B, hepatitis C, and HIV infections before being started on synthetic or biologic disease-modifying anti-rheumatic drugs (DMARDs). As per the national/regional guidelines, patients being planned for biologic DMARDs should also be screened for latent tuberculosis.",
+      "tags": [
+        "Biologics",
+        "AxSpA",
+        "DMARDs",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "NICE requires a DAS28 improvement of >1.2 from baseline at the 6-month review to justify ongoing tre…",
+      "text": "As per NICE guidance, the difference between the current and pre-biologic score should be more than 1.2 to continue on the biologic.",
+      "tags": [
+        "Biologics",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "SLE + (MAS): Continuous high fever, pancytopenia, hepatosplenomegaly, and hyperferritinaemia, unique…",
+      "text": "This is an acutely ill patient of known SLE with continuous high-grade fever, lymphadenopathy, splenomegaly, pancytopenia, raised CRP but paradoxically low ESR, low fibrinogen, raised globulins, hyperferritinaemia, hypertriglyceridemia, hepatitis, acute kidney injury, raised LDH, and coagulation abnormalities; these features are consistent with a d",
+      "tags": [
+        "Methotrexate",
+        "Renal",
+        "RA",
+        "SLE",
+        "Steroids",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Azathioprine toxicity: Profound pancytopenia caused by allopurinol inhibiting xanthine oxidase, whic…",
+      "text": "This patient who was on azathioprine long term has presented with evidence of pancytopenia following a recent increase of allopurinol dose. He has no clinical evidence or investigation findings to suggest ongoing sepsis (which can cause bone marrow suppression) or a haematological malignancy (bone marrow only reveals pancytopenia).",
+      "tags": [
+        "Gout"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "PsA with significant psoriasis (PASI ≥10 or BSA ≥10): IL-17 inhibitors (e.g., ixekizumab) or IL-23 i…",
+      "text": "This patient should be offered ixekizumab. According to the 2022 British Society for Rheumatology guideline for the treatment of psoriatic arthritis with biologic and targeted synthetic DMARDs: significant psoriasis, defined as BSA ≥10 or PASI ≥10, or localised psoriasis in the presence of significant functional impairment and/or high levels of dis",
+      "tags": [
+        "Biologics",
+        "PsA",
+        "AxSpA",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "MTX-pneumonitis with active RA: Stop MTX and initiate a second conventional DMARD (e.g., azathioprin…",
+      "text": "This woman does not meet the criteria yet for biologic therapy, since she has failed just one DMARD. Anti-TNF treatments such as adalimumab and etanercept, should only be considered after treatment has failed with two DMARDs (one of which being methotrexate, either sequentially or in combination).",
+      "tags": [
+        "Methotrexate",
+        "Biologics",
+        "RA",
+        "AxSpA",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "NICE: Continuation of a TNF inhibitor requires an \"adequate\" EULAR response at 6 months, defined as …",
+      "text": "People with rheumatoid arthritis whose disease does not respond to intensive conventional therapy (a combination of conventional DMARDs), and whose disease is severe (DAS28 greater than 5.1), may have treatment with biological therapy. This includes the TNF-alpha inhibitors adalimumab, etanercept, infliximab, certolizumab pegol and golimumab.",
+      "tags": [
+        "Biologics",
+        "RA",
+        "AxSpA",
+        "DMARDs",
+        "Perioperative"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Gout in CKD 5/Heart Failure with Allopurinol intolerance: Allopurinol desensitisation, febuxostat is…",
+      "text": "This patient has a history of sensitivity to allopurinol, which may be alleviated with a desensitisation regime. His past medical history means that he would not be an ideal candidate for uricosuric drugs or febuxostat.",
+      "tags": [
+        "Gout",
+        "Renal",
+        "Steroids"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Pregnancy + RA Flare: Add prednisolone to control the flare and continue IFX, as TNFi are BSR-safe i…",
+      "text": "39% of rheumatoid arthritis patients improved during pregnancy, mostly starting in the first trimester. Transplacental passage of anti-TNF agents does not occur until week 16 onwards.",
+      "tags": [
+        "Biologics",
+        "Pregnancy",
+        "RA",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Erosive OA: Symmetrical DIP involvement featuring central erosions (\"gull-wing\" appearance) and join…",
+      "text": "The three common types of arthritis affecting hand joints are rheumatoid arthritis, psoriatic arthritis, and osteoarthritis. Rheumatoid arthritis (RA) is polyarticular, typically involving the metacarpophalangeal (MCP) joints, followed by the proximal interphalangeal (PIP) joints, while involvement of the distal interphalangeal (DIP) joints is unco",
+      "tags": [
+        "RA",
+        "PsA",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Perioperative csDMARDs: BSR guidelines recommend continuing conventional DMARDs (e.g., MTX, SSZ, HCQ…",
+      "text": "British Society of Rheumatology guidelines recommend that there is no need for conventional DMARD therapy to be stopped in the perioperative period.",
+      "tags": [
+        "Methotrexate",
+        "DMARDs",
+        "Perioperative"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Ustekinumab is the monoclonal antibody targeting both IL-12 and IL-23, vs IL-17 inhibitors like secu…",
+      "text": "Ustekinumab is the monoclonal antibody targeting both IL-12 and IL-23, vs IL-17 inhibitors like secukinumab.",
+      "tags": [
+        "Gout",
+        "PsA",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Schmorl’s node: A common degenerative finding on MRI, vertical herniation of the nucleus pulposus in…",
+      "text": "Schmorl’s node is the herniation of nucleus pulposus through the vertebral end plate into the body of the adjacent vertebra. This is a degenerative change, which can often be asymptomatic.",
+      "tags": [
+        "AxSpA",
+        "Imaging"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Axial PsA + IBD Risk: Adalimumab (TNFi), treats both axial disease and Crohn’s, vs IL-17i (secukinum…",
+      "text": "In people with an active psoriatic axial disease with inadequate response or intolerance to at least two NSAIDs, they should be offered any TNF inhibitor (TNFi) e.g., Adalimumab or IL-17 inhibitor (IL17i) e.g., Secukinumab.",
+      "tags": [
+        "PsA",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Calcium Oxalate Arthritis: Triggered by ascorbic acid use in ESRD, featuring diagnostic bipyramidal …",
+      "text": "Classically in calcium oxalate arthritis crystals are bipyramidal shaped under ordinary light microscopy which is diagnostic. This condition tends to occur in those with end-stage renal failure who are taking ascorbic acid supplementation, or primary oxalosis.",
+      "tags": [
+        "Renal"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "G6PD testing is mandatory before starting pegloticase to prevent the risk of severe haemolysis and m…",
+      "text": "Glucose-6-phosphate dehydrogenase (G6PD) testing should be done before starting pegloticase. According to The British Society for Rheumatology guidelines for the management of gout pegloticase, a polyethylene glycol-modified mammalian uricase, can be effective in patients with severe symptomatic tophaceous gout, however, it is contraindicated in pa",
+      "tags": [
+        "Gout",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Drug-induced gout: Caused by pyrazinamide or ethambutol reducing renal uric acid excretion.",
+      "text": "This patient has developed hyperuricaemia due to pyrazinamide/ethambutol and resultant crystal formation and gouty inflammatory arthritis. Both of these drugs are implicated in hyperuricaemia by renal underexcretion of uric acid.",
+      "tags": [
+        "Gout",
+        "Renal",
+        "AxSpA",
+        "CPPD",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "HBV Screening: In a patient with isolated core antibody (anti-HBc+, HBsAg-, anti-HBs-), you must che…",
+      "text": "This patient has a positive hepatitis B core antibody and negative surface antigen and surface antibody. This suggests one of the following:",
+      "tags": [
+        "Biologics",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Type 2 IBD-associated peripheral arthritis: This small-joint polyarthritis is independent of gut act…",
+      "text": "This is Type 2 IBD-associated peripheral arthritis (small joints, independent of gut activity). Her Crohn’s is well controlled on azathioprine.",
+      "tags": [
+        "Methotrexate",
+        "Biologics",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "MRI SIJ with STIR for detecting early axSpA because it highlights bone marrow oedema (active sacroil…",
+      "text": "Early ankylosing spondylitis is often difficult to diagnose due to the episodic nature of symptoms. There can be considerable symptom-free periods in early disease which can lead to delay in presentation and diagnosis.",
+      "tags": [
+        "Gout",
+        "AxSpA",
+        "Imaging"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Gout Flare on ULT: Continue allopurinol at the current dose and add an NSAID (or colchicine) until t…",
+      "text": "A definitive diagnosis of gout relies on demonstration of negatively birefringent monosodium urate crystals on microscopy on aspiration of fluid from a joint or tophus. Aspiration of a tiny amount of fluid (enough to fill the needle, but not enough to enter the syringe chamber) can be enough to demonstrate urate crystals.",
+      "tags": [
+        "Gout",
+        "Renal",
+        "AxSpA",
+        "Steroids"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Latent TB: You can initiate adalimumab (or other biologics) 4 weeks after starting prophylactic trea…",
+      "text": "The BSR advises that patients with latent TB be treated for at least 4 weeks before commencement of biologic DMARD therapy, though patients should be closely monitored.",
+      "tags": [
+        "Biologics",
+        "AxSpA",
+        "DMARDs",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Felty’s syndrome: triad of longstanding RA, splenomegaly (the LUQ mass), and neutropenia, often comp…",
+      "text": "This long-standing patient with rheumatoid arthritis has the triad of Neutropenia, Splenomegaly and leg ulcers. This is Felty’s syndrome.",
+      "tags": [
+        "Methotrexate",
+        "RA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Baricitinib is 70% renally excreted, it is contraindicated in severe CKD (CrCl < 30 ml/min), vs tofa…",
+      "text": "Tofacitinib is metabolised mainly in the liver by cytochrome enzymes (CYP3A4), with only 30% being renally excreted. Baricitinib is typically excreted (70%) through the renal system.",
+      "tags": [
+        "Renal",
+        "JAKi"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Tocilizumab: Avoid in history of diverticulitis, can precipitate bowel perforation, especially with …",
+      "text": "Tocilizumab needs to be used with caution in patients with diverticular disease. It can precipitate bowel perforation in such patients.",
+      "tags": [
+        "Biologics",
+        "AxSpA",
+        "Steroids",
+        "JAKi"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "ICI-related inflammatory arthritis: Symmetric synovitis and tenosynovitis on nivolumab are immune-re…",
+      "text": "This patient has symmetric inflammatory polyarthritis of the hands with ultrasound features of synovitis and tenosynovitis. This patient, however, is likely to have an immune checkpoint inhibitor (ICI) related immune adverse effect presenting as symmetric inflammatory polyarthritis.",
+      "tags": [
+        "Gout",
+        "RA",
+        "SLE",
+        "AxSpA",
+        "Imaging"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Caplan’s syndrome: combination of RA and pneumoconiosis (triggered by coal, asbestos, or silica expo…",
+      "text": "This patient's most likely diagnosis is Caplan’s syndrome. Work exposure to coal, asbestos, or silica in genetically predisposed rheumatoid arthritis (RA) patients triggers an inflammatory reaction in the lungs and causes pneumoconiosis known as Caplan’s syndrome.",
+      "tags": [
+        "RA",
+        "Vasculitis",
+        "AxSpA",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "SSc arthropathy: 1st CMC joint involvement mimics erosive OA or CPPD, but intra-articular calcificat…",
+      "text": "This patient has clinical features of systemic sclerosis (SSC), Raynaud’s phenomenon, skin sclerosis, puffy fingers, digital ulcers, and interstitial lung disease signs. The patient also has distinct arthritis affecting the 1st CMC joint.",
+      "tags": [
+        "RA",
+        "AxSpA",
+        "CPPD",
+        "SSc"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Colchicine-induced myoneuropathy: Painless proximal weakness + high CPK; insidiously after prolonged…",
+      "text": "The most probable diagnosis, in this case, is colchicine-induced myositis. The temporal association between the initiation of colchicine and the onset of muscle weakness makes colchicine the most likely culprit for his myositis.",
+      "tags": [
+        "Gout",
+        "Renal",
+        "AxSpA",
+        "Steroids"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "TNFi in pregnancy: ADA, INF, ETA, or GOL can continue throughout pregnancy; no mandatory switch to C…",
+      "text": "This patient may continue adalimumab throughout pregnancy to maintain maternal disease control. According to the British Society for Rheumatology guideline on prescribing drugs in pregnancy and breastfeeding: immunomodulatory anti-rheumatic drugs and corticosteroids, there is no need to switch either before or during pregnancy, from TNFi with known",
+      "tags": [
+        "Pregnancy"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Perioperative bDMARDs: Hold pre-op based on half-life; restart post-op only when wound healing compl…",
+      "text": "The BSR advises that, in general, all synthetic DMARDs should continue during the perioperative period to minimise the risk of an arthritis flare as well as minimise the need for corticosteroid use. The BSR does, however, advise that a case-by-case decision should be made for patients undergoing high-risk procedures, i.e.",
+      "tags": [
+        "Methotrexate",
+        "Biologics",
+        "AxSpA",
+        "DMARDs",
+        "Perioperative",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "HH arthropathy: Suspect if CPPD, hooked osteophytes (2nd/3rd MCPs), DM, and transaminitis. Key inves…",
+      "text": "While all of the above investigations may be considered appropriate, iron studies are the most important investigation for determining the correct diagnosis.",
+      "tags": [
+        "AxSpA",
+        "Imaging",
+        "CPPD"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Axial SpA: Biologics require failure of 2 NSAIDs (each ≥ 2 weeks). NICE: Active disease must persist…",
+      "text": "This patient is a young man with inflammatory back pain with elevated inflammatory markers and he is positive for HLA B27. He has features of acute and chronic sacroiliitis on MRI, so a diagnosis of axial spondyloarthritis has been made.",
+      "tags": [
+        "Biologics",
+        "AxSpA",
+        "Imaging",
+        "Steroids"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Cholesterol crystals: in chronic effusions (e.g., long-standing RA). Square/rectangular with notched…",
+      "text": "Cholesterol crystals are found in synovial fluid from chronic joint effusions, usually rheumatoid arthritis. The crystals are square-shaped with a single notched corner.",
+      "tags": [
+        "Gout",
+        "Renal",
+        "RA",
+        "CPPD"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Crystal-Infection Co-existence: Crystals + sepsis (fever/hypotension) + immunosuppression = await MC…",
+      "text": "This patient presents with features consistent with sepsis. He is also likely to be immunosuppressed from a recent organ transplant.",
+      "tags": [
+        "Gout",
+        "Renal",
+        "Steroids",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Chronic Gout X-ray: Punched-out juxta-articular erosions with sclerotic/overhanging margins (Martel'…",
+      "text": "Chronic gout is associated with specific and non-specific X-ray appearances. It can cause erosive changes, which are typically juxta-articular or marginal and described as punched-out with sclerotic margins.",
+      "tags": [
+        "Gout",
+        "RA",
+        "AxSpA",
+        "Imaging",
+        "CPPD",
+        "SSc"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Pre-op Biologics: BSR guidelines recommend scheduling surgery after one dosing interval plus one wee…",
+      "text": "Recent British Society of Rheumatology guidelines recommend at least one dosing interval to have elapsed for a specific biologic drug before a procedure. For adalimumab, they recommend surgery to be scheduled at week 3 relative to the last biologic dose.",
+      "tags": [
+        "Biologics",
+        "Perioperative"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "PsA Treatment: New targets include IL-23 blockade (e.g., Ustekinumab, Guselkumab) and IL-17 blockade…",
+      "text": "First-line treatment is with NSAIDs plus or minus short courses of steroids. DMARDs are used in moderate to severe disease or disease refractory to first-line treatment, i.e.",
+      "tags": [
+        "Biologics",
+        "PsA",
+        "AxSpA",
+        "Steroids",
+        "DMARDs",
+        "JAKi"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Strongyloidiasis: Symmetric polyarthritis + eosinophilia + travel history = treat with Ivermectin, a…",
+      "text": "This patient with symmetric polyarthritis of more than 6 weeks duration with raised acute phase reactants, eosinophilia, airways hyperreactivity, gastrointestinal manifestations, and a recent history of travel to an endemic country likely has strongyloidiasis. Strongyloidiasis can be a cause of polyarthritis.",
+      "tags": [
+        "Gout",
+        "Vasculitis",
+        "AxSpA",
+        "Steroids",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Etanercept is not recommended for uveitis; switch to a monoclonal TNF antibody (e.g., Infliximab or …",
+      "text": "Etanercept is not recommended in patients with a history of uveitis. If patients develop uveitis while on a biologic, a trial of an alternative biologic could be considered.",
+      "tags": [
+        "Biologics"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Septic Bursitis: Highly elevated WBC (>50k-100k) in a single bursa",
+      "text": "Sepsis must be excluded first in any patient presenting with signs of monoarticular inflammation. A rheumatoid flare would usually involve several joints.",
+      "tags": [
+        "Gout",
+        "CPPD",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Palindromic Rheumatism: Recurrent, short-lived inflammatory flares with normal intervals and no eros…",
+      "text": "This patient has a presentation consistent with palindromic rheumatism which is an inflammatory disease associated with recurrent, short-lived episodes of arthritis that do not cause residual damage such as erosions. She is at high risk of developing rheumatoid arthritis given her antibody profile.",
+      "tags": [
+        "Methotrexate",
+        "Pregnancy",
+        "RA",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "AOSD Cytokine Profile: Adult-Onset Still's Disease is driven by a \"cytokine storm\" of innate immunit…",
+      "text": "IL-1, IL-6, IL-18 and TNFa are all elevated in Adult-Onset Still’s Disease (AOSD) (1). IL-23 is not significantly raised in AOSD and is not thought to play an important role in its pathogenesis.",
+      "tags": [
+        "General"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Septic Arthritis: In an immunosuppressed patient with a \"hot joint,\" you must admit and aspirate for…",
+      "text": "This patient on multiple disease-modifying antirheumatic drugs (DMARDs) for rheumatoid arthritis, poorly controlled diabetes, and chronic kidney disease presents with acute monoarthritis. His blood tests reveal marginally elevated ESR and CRP and elevated uric acid levels.",
+      "tags": [
+        "Gout",
+        "Renal",
+        "RA",
+        "AxSpA",
+        "Imaging",
+        "DMARDs",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Live Vaccine CI: Avoid MMR, BCG, and Yellow Fever in pts on bDMARDs or MTX >25mg/wk due to risk of d…",
+      "text": "Both BSR and EULAR address the importance of vaccination in patients with rheumatic diseases. The BSR guidance stems from the Joint Committee on Vaccination and Immunisation guidance.",
+      "tags": [
+        "Methotrexate",
+        "Biologics",
+        "AxSpA",
+        "DMARDs",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "AS and Active TB: TNFis, IL-17is (Ixekizumab), and JAKis (Tofacitinib) are strictly contraindicated …",
+      "text": "Sulfasalazine (SSZ) is the most appropriate management option for this patient’s ankylosing spondylitis (AS) at this stage. The ASAS-EULAR management recommendations for axial spondyloarthritis were updated in 2016.",
+      "tags": [
+        "Methotrexate",
+        "Biologics",
+        "AxSpA",
+        "Steroids",
+        "DMARDs",
+        "JAKi",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Parsonage-Turner Syndrome (Brachial Neuritis): Severe acute shoulder pain followed by weakness/atrop…",
+      "text": "This man presents with typical features of Parsonage-Turner Syndrome, which is also known as acute brachial neuritis. The typical prodrome is acute severe pain followed by weakness.",
+      "tags": [
+        "AxSpA",
+        "Imaging"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Gout: Recurrent monoarthritis with hyperuricemia and the pathognomonic \"Double Contour Sign\" (MSU on…",
+      "text": "USG of the left knee shows the 'double contour’ sign which is characteristic of chronic gout. The ‘double contour’ sign is seen as an echogenic line on the outer surface of the joint hyaline cartilage (which is normally anechoic) parallel to the subchondral bone which is secondary to deposition of monosodium urate crystals on the surface of hyaline",
+      "tags": [
+        "Gout",
+        "AxSpA",
+        "Imaging"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "RA (Robust Reaction): In physically active patients, RA can present with large subchondral cysts (ge…",
+      "text": "This x-ray is of a patient with rheumatoid arthritis and can be easily mistaken for gout due to the presence of intra-osseous cyst-like lesions.",
+      "tags": [
+        "Gout",
+        "RA",
+        "AxSpA",
+        "Imaging",
+        "CPPD"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Gout & Hypertension: Losartan (an ARB) is the antihypertensive & uricosuric, Avoid: Diuretics (Thiaz…",
+      "text": "This patient has difficult-to-control gout and significant hypertension. Both uncontrolled gout and hypertension are associated with an increased risk of cardiovascular disease.",
+      "tags": [
+        "Gout",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "PsA Biologic Rule: Start a TNFi (e.g., Adalimumab) if a pt has  SJC/TJC after failing 2 csDMARDs",
+      "text": "He has active psoriatic arthritis and has more than 3 tender and 3 swollen joints. He has tried 2 DMARDs and hence will qualify for a biologic (adalimumab) as per NICE guidance.",
+      "tags": [
+        "Biologics",
+        "PsA",
+        "AxSpA",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Aza-Allopurinol Interaction: When starting Allopurinol, the Azathioprine (AZA) dose must be reduced …",
+      "text": "The manufacturer advises reducing the dose of azathioprine to one-quarter of the usual dose with concurrent use of allopurinol.",
+      "tags": [
+        "Gout"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "RA Step-up Therapy: If a patient remains active (DAS28 > 3.2) despite max-dose MTX (25mg), the next …",
+      "text": "NICE and BSR guidance both recommend combination therapy early on in treatment of rheumatoid arthritis with the proviso that comorbidities and age are taken into consideration before starting therapy. This lady has tolerated prednisolone and methotrexate well, but she is still symptomatic and her DAS score also suggests that her rheumatoid arthriti",
+      "tags": [
+        "Methotrexate",
+        "Biologics",
+        "RA",
+        "DMARDs"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "AIN Syndrome (Kiloh-Nevin Syndrome): A purely motor neuropathy of the median nerve branch causing we…",
+      "text": "Anterior interosseous nerve syndrome (also known as Kiloh Nevin Syndrome) refers to a functional deficit of the anterior interosseous nerve. This is a purely motor branch of the median nerve.",
+      "tags": [
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "TNF inhibitors (e.g., Adalimumab) must avoid unpasteurized or undercooked foods (raw eggs, poultry) …",
+      "text": "The patient should be advised to avoid foods such as raw eggs and poultry. Tumour necrosis factor (TNF) is important for controlling bacterial intracellular infections.",
+      "tags": [
+        "Biologics",
+        "AxSpA",
+        "Infection"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "RA Cervical Spine: Neck pain and occipital electric sensations in long-standing RA signal subaxial o…",
+      "text": "This patient most likely has C2 radiculopathy as a result of facet joint arthropathy with possible cervical instability, most commonly atlanto-axial and sub-axial subluxation.",
+      "tags": [
+        "RA",
+        "AxSpA"
+      ]
+    },
+    {
+      "chapter": "Adult Inflammatory Arthritis incl. Crystal Arthropathies",
+      "title": "Persistent fever, salmon-pink rash, and high ferritin suggest AOSD; if refractory to steroids and cs…",
+      "text": "This patient is most likely suffering from acute adult-onset Still’s disease. NSAIDs are only used temporarily, and most patients require definite treatment with disease-modifying anti-rheumatic drugs (DMARDs) or biologics.",
+      "tags": [
+        "Methotrexate",
+        "Biologics",
+        "Steroids",
+        "DMARDs"
+      ]
+    }
+  ]
+}
