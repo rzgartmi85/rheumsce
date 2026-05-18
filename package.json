@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "mkdir -p public && cp -r ./* public/ && rm -rf public/node_modules public/.git public/.github public/package.json public/package-lock.json public/firebase.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
