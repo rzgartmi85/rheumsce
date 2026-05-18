@@ -14,24 +14,34 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Setup Node.js (adjust version if needed)
+      # Setup Node.js
       - uses: actions/setup-node@v4
         with:
-          node-version: '20' # Recommended Node.js LTS version
+          node-version: '20'
 
       # Install dependencies and build your project
-      # Assuming your project uses npm and has a build script. Adjust if using yarn or a different build command.
       - run: npm ci
       - run: npm run build
 
-      # Deploy to Firebase Hosting
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      # STEP 1: Deploy to Firebase Hosting (Preview Channel for Pull Requests)
+      - name: Deploy to Firebase Hosting (Preview Channel)
+        if: github.event_name == 'pull_request'
+        uses: FirebaseExtended/action-hosting-deploy@v1 # <--- UPDATED TO v1
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}' # Provided by GitHub for PR comments
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_YAHAKEEM_B9349 }}' # Your secret name
-          projectId: 'yahakeem-b9349' # Your Firebase Project ID
-          # Conditional deployment based on the event that triggered the workflow
-          # If it's a pull request, create a preview channel
-          # Otherwise, deploy to the default live channel
-          channelId: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.number) || '' }}
-          expires: ${{ github.event_name == 'pull_request' && '7d' || '' }} # Optional: expire preview channel after 7 days
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_YAHAKEEM_B9349 }}'
+          projectId: 'yahakeem-b9349'
+          channelId: 'pr-${{ github.event.number }}' # Always provide a channelId for PRs
+          expires: '7d' # Optional: expire preview channel after 7 days
+
+      # STEP 2: Deploy to Firebase Hosting (Live Channel for Pushes to Main)
+      - name: Deploy to Firebase Hosting (Live Channel)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: FirebaseExtended/action-hosting-deploy@v1 # <--- UPDATED TO v1
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_YAHAKEEM_B9349 }}'
+          projectId: 'yahakeem-b9349'
+          # NOTE: 'channelId' is DELIBERATELY OMITTED here for live deployment.
+          # The action defaults to deploying to the live channel if channelId is not specified.
+          
