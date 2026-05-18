@@ -26,7 +26,7 @@ jobs:
       # STEP 1: Deploy to Firebase Hosting (Preview Channel for Pull Requests)
       - name: Deploy to Firebase Hosting (Preview Channel)
         if: github.event_name == 'pull_request'
-        uses: FirebaseExtended/action-hosting-deploy@v1 # <--- UPDATED TO v1
+        uses: FirebaseExtended/action-hosting-deploy@v0 # <--- CORRECTED BACK TO v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_YAHAKEEM_B9349 }}'
@@ -37,7 +37,7 @@ jobs:
       # STEP 2: Deploy to Firebase Hosting (Live Channel for Pushes to Main)
       - name: Deploy to Firebase Hosting (Live Channel)
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: FirebaseExtended/action-hosting-deploy@v1 # <--- UPDATED TO v1
+        uses: FirebaseExtended/action-hosting-deploy@v0 # <--- CORRECTED BACK TO v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_YAHAKEEM_B9349 }}'
