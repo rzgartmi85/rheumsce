@@ -12,8 +12,8 @@ const firebaseConfig = {
   projectId: "yahakeem-b9349",
   storageBucket: "yahakeem-b9349.firebasestorage.app",
   messagingSenderId: "533411259533",
-  appId: "1:533411259533:web:2262a1c29d40882a326ec4",
-  measurementId: "G-C4QJSSFP3E"
+  appId: "1:533411259533:web:bdceb1b45ab2b9b7326ec4",
+  measurementId: "G-FHFYJVFRFK"
 };
 
 // Initialize Firebase
